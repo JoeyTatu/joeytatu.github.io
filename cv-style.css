@@ -1,23 +1,9 @@
-/* ===== Media ===== */
-@media (max-width: 600px) {
-    .row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cell {
-        flex: unset;
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-}
-
-/* ===== General ===== */
+/* ===== Body & Typography ===== */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     color: #333;
-    margin: 20px;
+    /* margin: 20px; *//* No longer needed: In Bootstrap */
+    /* line-height: 1.6; *//* No longer needed: In Bootstrap */
 }
 
 h1, h2, h3 {
@@ -25,6 +11,7 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
+/* ===== Shadows & Colours ===== */
 .shadow {
     color: orangered;
     text-shadow: 2px 2px 5px gray;
@@ -40,9 +27,10 @@ h2 {
     margin-top: 30px;
 }
 
+/* ===== Links ===== */
 a {
     color: #b300b3;
-    /* light purple */
+    /* Light purple */
     text-decoration: none;
 }
 
@@ -50,7 +38,19 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== Flexbox ===== */
+/* ===== Skills Styling ===== */
+#html-skill {
+    color: white;
+    text-shadow: 2px 2px 4px grey;
+}
+
+#css-skill {
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+/* ===== Flexbox / Grid ===== */
+/* No longer needed: In Bootstrap */
+/*
 .container {
     display: flex;
     flex-direction: column;
@@ -84,8 +84,11 @@ a:hover {
     text-align: left;
     padding: 0.25rem 0.5rem;
 }
+*/
 
-/* ===== Skills ===== */
+/* ===== Skills Columns (Flex/Columns) ===== */
+/* No longer needed: In Bootstrap */
+/*
 ul {
     list-style: disc inside;
     columns: 2;
@@ -93,12 +96,21 @@ ul {
     margin: 0 auto 20px;
     max-width: 800px;
 }
+*/
 
-#html-skill {
-    color: white;
-    text-shadow: 2px 2px 4px grey;
-}
+/* ===== Media Queries ===== */
+/* No longer needed: In Bootstrap */
+/*
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-#css-skill {
-    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+    .cell {
+        flex: unset;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
+*/
