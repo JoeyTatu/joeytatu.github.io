@@ -2,197 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joey Tatú - CV</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="cv-style.css">
+  <meta charset="UTF-8">
+  <title>Sky TV Guide - Channels</title>
+  <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="css/index-style.css"> <!-- Overrides global-style -->
 </head>
 
-<body class="bg-light">
+<body>
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    🌙<span class="theme-label">DARK<br>MODE</span>
+  </button>
 
-    <div class="container my-5">
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="TVBridge Logo" class="header-logo">
+    </a>
+    <br>
+    <button id="channel-list" onclick="location.href='index.html'">
+      &larr;<br>Return to TVBridge.com
+    </button>
 
-        <!-- Header -->
-        <div class="text-center mb-4">
-            <h1>Joey Tatú</h1>
-            <h2 class="shadow">Contact details</h2>
-            <h3>
-                <a href="mailto:x15015556@student.ncirl.ie">Email</a> |
-                <a href="https://linkedin.com/in/JoeyTatu" target="_blank">LinkedIn</a>
-            </h3>
-        </div>
+    <h1>Sky TV Guide - Channels</h1>
+    <p>TV listings for Sky in the United Kingdom and Ireland</p>
+    <p>Select a channel to view listings</p>
 
-        <!-- About Section -->
-        <h2 class="shadow">About Joey</h2>
-        <div id="brief" class="mb-5">
-            <p>I'm a Cloud Computing and Software Development professional with a strong foundation in IT services, programming, and data management—backed by academic achievements and hands-on experience in diverse sectors.</p>
-
-            <p>Latest experience gained as an Organisational Excellence Specialist at FoodCloud, I focused on managing historical data, automating external partners. I brought a detail-oriented mindset and a commitment to creating efficient, scalable, and future-proof solutions.</p>
-
-            <p>My academic background includes a BSc (Hons) in Computing and a Postgraduate Diploma in Cloud Computing from the National College of Ireland. I've built projects using technologies like AWS, Java, Kotlin, Python, TensorFlow Lite, MongoDB, and Docker. I enjoy diving into challenges, whether it's building an Android app to help medical professionals identify diabetic retinopathy using AI or designing tools to help musicians optimise their acoustic setups.</p>
-
-            <p>What sets me apart is my blended background—over a decade in hospitality taught me the value of communication, empathy, and teamwork. Combined with my technical training, I bring both people skills and problem-solving power to any role I take on.</p>
-
-            <p>Technically, I'm proficient with:</p>
-            <ul>
-                <li>Programming: Java, Kotlin, Python, JavaScript, PHP, C#, HTML, XML, R, SQL & NoSQL</li>
-                <li>Cloud & DevOps: AWS (Lambda, S3, DynamoDB, CloudWatch, Chime, etc.), Docker, Terraform, Flask, Django</li>
-                <li>Data & Visualisation: Power BI, Excel Pivot Tables, DBeaver, statistical analysis with R</li>
-                <li>Tools: GitHub, Android Studio, TensorFlow, Google Colab</li>
-            </ul>
-
-            <p>I'm always looking to learn, collaborate, and innovate—whether that's through cloud-native solutions, backend services, or web and mobile development. If you're working on something exciting in the world of cloud, data, or digital transformation, I'd love to connect.</p>
-        </div>
-
-        <!-- Experience Section -->
-        <h2 class="shadow">Experience</h2>
-        <div class="container mb-5">
-
-            <div class="row header bg-light fw-bold d-flex p-2">
-                <div class="cell col-md-4">Position</div>
-                <div class="cell col-md-4">Company</div>
-                <div class="cell col-md-4">Dates</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Organisational Excellence Specialist</div>
-                <div class="cell col-md-4">FoodCloud</div>
-                <div class="cell col-md-4">Feb 2024 - Nov 2024</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Retail Assistant</div>
-                <div class="cell col-md-4">SVP - Vincent's</div>
-                <div class="cell col-md-4">May 2023 - Jul 2023</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Academic Internship</div>
-                <div class="cell col-md-4">National College of Ireland</div>
-                <div class="cell col-md-4">Feb 2018 - Jul 2018</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Catering Assistant</div>
-                <div class="cell col-md-4">Compass Group</div>
-                <div class="cell col-md-4">Jan 2007 - Feb 2014</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Catering Assistant</div>
-                <div class="cell col-md-4">Lanperry Ltd.</div>
-                <div class="cell col-md-4">Mar 2001 - Oct 2006</div>
-            </div>
-
-        </div>
-
-        <!-- Education Section -->
-        <h2 class="shadow">Education</h2>
-        <div class="container mb-5">
-
-            <div class="row header bg-light fw-bold d-flex p-2">
-                <div class="cell col-md-4">Award</div>
-                <div class="cell col-md-4">College</div>
-                <div class="cell col-md-4">Dates</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Higher Diploma in Science in Computing (Artificial Intelligence/Machine Learning)</div>
-                <div class="cell col-md-4">National College of Ireland</div>
-                <div class="cell col-md-4">Sep 2025 - Aug 2026</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Bachelor of Science in Computing (Software Development)</div>
-                <div class="cell col-md-4">National College of Ireland</div>
-                <div class="cell col-md-4">Sep 2018 - May 2021</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">Higher Certificate in Science in Computing Applications and Business Support</div>
-                <div class="cell col-md-4">National College of Ireland</div>
-                <div class="cell col-md-4">Sep 2015 - May 2018</div>
-            </div>
-
-            <div class="row d-flex p-2 border-bottom">
-                <div class="cell col-md-4">QQI Level 5 (Business and IT)</div>
-                <div class="cell col-md-4">Tallaght Adult Education Services</div>
-                <div class="cell col-md-4">Sep 2014 - May 2015</div>
-            </div>
-
-        </div>
-
-        <!-- Skills Section -->
-        <h2 class="shadow">Skills</h2>
-        <ul class="list-group list-group-flush row row-cols-1 row-cols-md-2 g-2 mb-5">
-            <li class="list-group-item">Agile & Waterfall Methodologies</li>
-            <li class="list-group-item">Amazon Web Services</li>
-            <li class="list-group-item">Android Studio</li>
-            <li class="list-group-item">AngularJS</li>
-            <li class="list-group-item">API Development</li>
-            <li class="list-group-item">Bookkeeping</li>
-            <li class="list-group-item">C#</li>
-            <li class="list-group-item">Catering</li>
-            <li class="list-group-item">Cloud 9</li>
-            <li class="list-group-item">Cloud Computing</li>
-            <li class="list-group-item">Cloud Computing IaaS</li>
-            <li class="list-group-item">Cloud Security</li>
-            <li class="list-group-item">Communication</li>
-            <li class="list-group-item">Cryptocurrency</li>
-            <li class="list-group-item" id="css-skill">CSS</li>
-            <li class="list-group-item">Customer Service</li>
-            <li class="list-group-item">Data Algorithms</li>
-            <li class="list-group-item">Data Management</li>
-            <li class="list-group-item">Data Structures</li>
-            <li class="list-group-item">Data Warehousing</li>
-            <li class="list-group-item">Databases</li>
-            <li class="list-group-item">DAX</li>
-            <li class="list-group-item">DevOps</li>
-            <li class="list-group-item">Git Bash</li>
-            <li class="list-group-item">GitHub</li>
-            <li class="list-group-item" id="html-skill">HTML</li>
-            <li class="list-group-item">Hybrid Cloud</li>
-            <li class="list-group-item">Java</li>
-            <li class="list-group-item">JavaScript</li>
-            <li class="list-group-item">jQuery</li>
-            <li class="list-group-item">Kotlin</li>
-            <li class="list-group-item">Microsoft Azure</li>
-            <li class="list-group-item">Microsoft Excel</li>
-            <li class="list-group-item">Microsoft Office</li>
-            <li class="list-group-item">Microsoft Power BI</li>
-            <li class="list-group-item">Microsoft PowerPoint</li>
-            <li class="list-group-item">Microsoft Word</li>
-            <li class="list-group-item">NetBeans</li>
-            <li class="list-group-item">Node.js</li>
-            <li class="list-group-item">Organisation Skills</li>
-            <li class="list-group-item">Problem Solving</li>
-            <li class="list-group-item">Programming</li>
-            <li class="list-group-item">Project Management</li>
-            <li class="list-group-item">Project Planning</li>
-            <li class="list-group-item">Python</li>
-            <li class="list-group-item">R</li>
-            <li class="list-group-item">Report & Analysis</li>
-            <li class="list-group-item">Report Writing</li>
-            <li class="list-group-item">Research Skills</li>
-            <li class="list-group-item">Ruby</li>
-            <li class="list-group-item">Ruby on Rails</li>
-            <li class="list-group-item">Software Development</li>
-            <li class="list-group-item">SQL</li>
-            <li class="list-group-item">Team Leadership</li>
-            <li class="list-group-item">Teamwork</li>
-            <li class="list-group-item">Time Management</li>
-            <li class="list-group-item">Usability Design</li>
-            <li class="list-group-item">Visual Studio</li>
-            <li class="list-group-item">Web Services API</li>
-            <li class="list-group-item">XML</li>
-        </ul>
-
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="🔎 Search for channels...">
+      <button id="clear-search" style="display: none;">✖</button>
     </div>
+  </header>
 
+  <main class="channels-container">
+    <section class="channel-column" id="uk-column">
+      <h2 style="text-align:center;">United Kingdom</h2>
+      <div id="channels-uk-list" class="channels-list"></div>
+    </section>
+
+    <section class="channel-column" id="ireland-column">
+      <h2 style="text-align:center;">Ireland</h2>
+      <div id="channels-ireland-list" class="channels-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Programme images may not be accurate. Channel logos and programme images are copyright of their
+      respective
+      owners.</a> |<span class="footer-break"> &copy; <span id="footer-year"></span> TVBridge.com — All Rights
+        Reserved — 📧
+        <a href="mailto:info@TVBridge.com">info@TVBridge.com</a>
+    </small>
+  </footer>
+  <script src="js/index-script.js" defer></script>
+  <script src="js/theme.js" defer></script>
 </body>
+
 </html>
