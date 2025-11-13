@@ -4,43 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Sky TV Guide - Channels</title>
-  <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
-  <link rel="stylesheet" href="css/global-style.css">
-  <link rel="stylesheet" href="css/index-style.css"> <!-- Overrides global-style -->
+  <link rel="icon"
+    type="image/x-icon"
+    href="images/fav-icon.ico">
+  <link rel="stylesheet"
+    href="css/global-style.css">
+  <link rel="stylesheet"
+    href="css/index-style.css"> <!-- Overrides global-style -->
 </head>
 
 <body>
-  <button id="theme-toggle" aria-label="Toggle dark mode">
+  <button id="theme-toggle"
+    aria-label="Toggle dark mode">
     🌙<span class="theme-label">DARK<br>MODE</span>
   </button>
 
   <header>
     <a href="index.html">
-      <img src="images/logo.png" alt="TVBridge Logo" class="header-logo">
+      <img src="images/logo.png"
+        alt="TVBridge Logo"
+        class="header-logo">
     </a>
     <br>
-    <button id="channel-list" onclick="location.href='index.html'">
+    <button id="channel-list"
+      onclick="location.href='index.html'">
       &larr;<br>Return Home
+    </button>
 
     <h1>Sky TV Guide - Channels</h1>
     <p>TV listings for Sky in the United Kingdom and Ireland</p>
     <p>Select a channel to view listings</p>
 
     <div id="search-container">
-      <input type="text" id="search-input" placeholder="🔎 Search for channels...">
-      <button id="clear-search" style="display: none;">✖</button>
+      <input type="text"
+        id="search-input"
+        placeholder="🔎 Search for channels...">
+      <button id="clear-search"
+        style="display: none;">✖</button>
     </div>
   </header>
 
   <main class="channels-container">
-    <section class="channel-column" id="uk-column">
+    <section class="channel-column"
+      id="uk-column">
       <h2 style="text-align:center;">United Kingdom</h2>
-      <div id="channels-uk-list" class="channels-list"></div>
+      <div id="channels-uk-list"
+        class="channels-list"></div>
     </section>
 
-    <section class="channel-column" id="ireland-column">
+    <section class="channel-column"
+      id="ireland-column">
       <h2 style="text-align:center;">Ireland</h2>
-      <div id="channels-ireland-list" class="channels-list"></div>
+      <div id="channels-ireland-list"
+        class="channels-list"></div>
     </section>
   </main>
 
@@ -52,8 +68,10 @@
         <a href="mailto:info@TVBridge.com">info@TVBridge.com</a>
     </small>
   </footer>
-  <script src="js/index-script.js" defer></script>
-  <script src="js/theme.js" defer></script>
+  <script src="js/index-script.js"
+    defer></script>
+  <script src="js/theme.js"
+    defer></script>
 </body>
 
 </html>
