@@ -191,6 +191,17 @@ const customImages = {
     "Moon and Stars": null,
     "Sweet Dreams": null,
     "hei hanes!": null,
+    "Revisted": null,
+    "Focus": null,
+    "The Debate": null,
+    "A PROPOS": null,
+    "Business": null,
+    "In the Press": null,
+    "Sports": null,
+    "Tete a tete": null,
+    "Entre Nous": null,
+    "Scoop": null,
+    "Revisited": null,
 };
 
 async function fetchProgrammeImage(title, channelLogo) {
