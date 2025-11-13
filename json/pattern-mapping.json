@@ -1,0 +1,52 @@
+[
+    {
+        "pattern": "^BBC .*News$",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/34/86217.jpg"
+    },
+    {
+        "pattern": "^STV News",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/111/279632.jpg"
+    },
+    {
+        "pattern": "^Shop:.+",
+        "flags": "i",
+        "url": "images/Teleshopping.png"
+    },
+    {
+        "pattern": "^SuperKitties.+",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/435/1089109.jpg"
+    },
+    {
+        "pattern": "^That's 80s.+",
+        "flags": "i",
+        "url": "images/That's_80s_block.png"
+    },
+    {
+        "pattern": "^That's 60s.+",
+        "flags": "i",
+        "url": "images/That's_60s_block.png"
+    },
+    {
+        "pattern": "^That's Rock.+",
+        "flags": "i",
+        "url": "images/Music_Live.png"
+    },
+    {
+        "pattern": "^That's Oldies:.+",
+        "flags": "i",
+        "url": "images/Classic_Music_Hits.png"
+    },
+    {
+        "pattern": "^London News (at|Replay)",
+        "flags": "i",
+        "url": "images/London_News.png"
+    },
+    {
+        "pattern": "^Dáil Éireann.+",
+        "flags": "i",
+        "url": "images/Dáil_Éireann.png"
+    }
+]
