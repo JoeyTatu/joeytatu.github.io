@@ -231,24 +231,31 @@ footer a:hover {
   position: fixed;
   top: 12px;
   right: 12px;
-  min-width: 44px;      /* minimum width */
-  height: auto;          /* allow height to grow */
-  padding: 6px 10px;     /* space around icon + text */
-  border-radius: 50%;    /* circular-ish */
+  min-width: 44px;
+  /* minimum width */
+  height: auto;
+  /* allow height to grow */
+  padding: 6px 10px;
+  /* space around icon + text */
+  border-radius: 50%;
+  /* circular-ish */
   border: none;
-  font-size: 14px;       /* icon size */
+  font-size: 14px;
+  /* icon size */
   line-height: 1.1;
   cursor: pointer;
   background: #f4f4f4;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 2000;
   display: flex;
-  flex-direction: column;   /* icon above label */
+  flex-direction: column;
+  /* icon above label */
   justify-content: center;
   align-items: center;
   text-align: center;
   transition: background 0.3s, color 0.3s, transform 0.2s;
-  white-space: pre;          /* respect line breaks in label */
+  white-space: pre;
+  /* respect line breaks in label */
 }
 
 #theme-toggle:hover {
@@ -256,11 +263,13 @@ footer a:hover {
 }
 
 #theme-toggle .theme-label {
-  font-size: 10px;       /* smaller font so it fits nicely */
+  font-size: 10px;
+  /* smaller font so it fits nicely */
   line-height: 1.1;
   margin-top: 2px;
   display: block;
-  white-space: pre;      /* respects <br> in innerHTML */
+  white-space: pre;
+  /* respects <br> in innerHTML */
 }
 
 /* Dark mode styling */
@@ -474,11 +483,6 @@ body.dark-mode #channel-logo {
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
-#channel-list {
-  text-align: center;
-  background-color: #0073e6;
-  color: #fff;
-}
 
 /* ============================================
    LISTINGS PAGE STYLES
@@ -564,43 +568,94 @@ li {
   background-color: #ffffb3;
 }
 
+/* Shared button styles */
+#scroll-top,
+#scroll-now,
 #prev-day,
-#next-day {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px;
-  height: 50px;
-  border-radius: 25px;
+#next-day,
+.return {
+  background-color: #0073e6;
+  color: white;
   border: none;
+  padding: 16px 0;
   font-size: 16px;
+  font-weight: bold;
+  text-align: center;
   cursor: pointer;
-  background-color: #ddd;
-  color: #333;
-  z-index: 1000;
-  display: flex;
+  border-radius: 30px;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s, color 0.2s;
+  font-size: 16px;
+}
+
+/* Individual positions */
+#scroll-top {
+  position: fixed;
+  display: flex;
+  left: 10px;
+  bottom: 40px;
+  width: 120px;
+  /* left side */
+}
+
+#scroll-now {
+  position: fixed;
+  display: flex;
+  right: 10px;
+  bottom: 40px;
+  width: 120px;
+  /* right side */
 }
 
 #prev-day {
+  position: fixed;
+  display: flex;
   left: 10px;
+  top: 50%;
+  width: 130px;
+  /* left side */
 }
 
 #next-day {
+  position: fixed;
+  display: flex;
   right: 10px;
+  top: 50%;
+  width: 130px;
+  /* right side */
 }
 
-#prev-day.active,
-#next-day.active {
-  background-color: #0073e6;
-  color: #fff;
+.return {
+  width: 180px;
 }
 
-#prev-day:disabled,
-#next-day:disabled {
-  background-color: #bbb;
-  color: #888;
-  cursor: default;
+/* Hover effects */
+#scroll-top:hover,
+#scroll-now:hover,
+#prev-day:hover,
+#next-day:hover,
+.return:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Dark mode */
+body.dark-mode #scroll-top,
+body.dark-mode #scroll-now,
+body.dark-mode #prev-day,
+body.dark-mode #next-day,
+body.dark-mode .return {
+  background-color: #444;
+}
+
+body.dark-mode #scroll-top:hover,
+body.dark-mode #scroll-now:hover,
+body.dark-mode #prev-day:hover,
+body.dark-mode #next-day:hover,
+body.dark-mode .return:hover {
+  background-color: #222;
 }

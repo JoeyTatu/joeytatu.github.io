@@ -21,8 +21,6 @@ function formatTimeWithDST(unixTs) {
     return tsDate.toISOString().substr(11, 5);
 }
 
-
-
 const params = new URLSearchParams(window.location.search);
 const sid = params.get('sid');
 if (!sid) {
@@ -75,7 +73,7 @@ async function loadChannelHeader() {
         if (!channel) {
             header.textContent = 'Channel Listings';
             document.title = 'Sky TV Guide - Listings';
-            return;
+            return null;
         }
 
         document.title = `Sky TV Guide - ${channel.name} listings`;
@@ -92,17 +90,17 @@ async function loadChannelHeader() {
             img.src = channel.logo;
             img.alt = channel.name;
 
-            img.style.maxWidth = '300px'; // won't exceed 300px
-            img.style.height = 'auto';    // keeps aspect ratio
+            img.style.maxWidth = '300px';
+            img.style.height = 'auto';
             img.style.display = 'block';
-            img.style.margin = '0 auto';  // centre it
+            img.style.margin = '0 auto';
 
             container.appendChild(img);
             logoEl.appendChild(container);
             nameEl.textContent = channel.name;
         }
 
-        return channel.logo || null;
+        return channel; // return full channel object
 
     } catch (err) {
         console.error('Header load error', err);
@@ -115,11 +113,8 @@ async function loadChannelHeader() {
 let customImages = {};
 let patternMappings = [];
 
-/**
- * Load JSON mappings once and reuse them.
- */
 async function loadMappings() {
-    if (patternMappings.length && Object.keys(customImages).length) return; // already loaded
+    if (patternMappings.length && Object.keys(customImages).length) return;
 
     const [imagesRes, patternsRes] = await Promise.all([
         fetch('/json/custom-images.json'),
@@ -129,16 +124,12 @@ async function loadMappings() {
     customImages = await imagesRes.json();
     const rawPatterns = await patternsRes.json();
 
-    // Rebuild regex patterns from plain text
     patternMappings = rawPatterns.map(entry => ({
         regex: new RegExp(entry.pattern, entry.flags || ''),
         url: entry.url
     }));
 }
 
-/**
- * Cleans programme titles for better matching.
- */
 function cleanProgrammeTitle(title) {
     return title
         .replace(/^New:\s*/i, '')
@@ -151,14 +142,8 @@ function cleanProgrammeTitle(title) {
         .trim();
 }
 
-/**
- * Cache for TVMaze results.
- */
 const tvMazeCache = new Map();
 
-/**
- * Query TVMaze API and cache results.
- */
 async function fetchFromTvMaze(title) {
     if (tvMazeCache.has(title)) return tvMazeCache.get(title);
 
@@ -172,16 +157,23 @@ async function fetchFromTvMaze(title) {
     return image;
 }
 
-/**
- * Main image fetcher.
- */
-async function fetchProgrammeImage(title, channelLogo) {
+async function fetchProgrammeImage(title, channelLogo, scheduleDate, channelName) {
     try {
         await loadMappings();
+
+        // DM News English uses channel logo for all programmes
+        if (channelName === "DM News English") {
+            return channelLogo;
+        }
 
         let cleanTitle = cleanProgrammeTitle(title);
 
         if (/^ITV News/i.test(cleanTitle)) cleanTitle = 'ITV News';
+
+        const isFriday = new Date(scheduleDate).getDay() === 5;
+        if (isFriday && /^This Morning$/i.test(cleanTitle)) {
+            return "images/This_Morning_Friday.png";
+        }
 
         for (const { regex, url } of patternMappings) {
             if (regex.test(cleanTitle)) return url;
@@ -207,7 +199,8 @@ async function loadSchedules() {
     const baseDate = new Date();
     const todayStr = formatDate(baseDate);
 
-    const channelLogo = await loadChannelHeader();
+    const channel = await loadChannelHeader();
+    const channelLogo = channel?.logo || null;
 
     const dateList = [];
     for (let i = 0; i <= TV_DAYS_TO_SHOW; i++) {
@@ -291,8 +284,8 @@ async function loadSchedules() {
                     synopsisDiv.classList.add('past');
                 }
 
-                // Fetch image
-                fetchProgrammeImage(event.t, channelLogo).then(url => {
+                // Pass channel name for DM News logic
+                fetchProgrammeImage(event.t, channelLogo, day, channel?.name).then(url => {
                     if (url) imgEl.src = url;
                 });
 
@@ -324,11 +317,21 @@ async function loadSchedules() {
                             nextFlagSet = true;
                         }
                     });
+
+                    // Show/hide the scroll-now button here
+                    const scrollNowBtn = document.getElementById('scroll-now');
+                    const nowLi = ul.querySelector('li.on-now');
+                    if (nowLi) {
+                        scrollNowBtn.style.display = 'block';
+                    } else {
+                        scrollNowBtn.style.display = 'none';
+                    }
                 }
 
                 updateNowNext();
                 setInterval(updateNowNext, 30000);
             }
+
         }
 
         dayDiv.appendChild(ul);
@@ -346,11 +349,30 @@ function renderDay(index) {
     const prevBtn = document.getElementById('prev-day');
     const nextBtn = document.getElementById('next-day');
 
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === allSchedules.length - 1;
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
 
-    prevBtn.classList.toggle('active', !prevBtn.disabled);
-    nextBtn.classList.toggle('active', !nextBtn.disabled);
+    // Show or hide previous and next buttons with proper enabling
+    if (index === 0) { // first day = hide previous
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'inline-block';
+    } else if (index === allSchedules.length - 1) { // last day = hide next
+        prevBtn.style.display = 'inline-block';
+        nextBtn.style.display = 'none';
+    } else { // middle days = show both
+        prevBtn.style.display = 'inline-block';
+        nextBtn.style.display = 'inline-block';
+    }
+
+    // Show scroll-now only if today and an on-now item exists
+    const todayStr = formatDate(new Date());
+    const viewingToday = formatDate(allSchedules[index].date) === todayStr;
+    if (viewingToday) {
+        const nowLi = allSchedules[index].element.querySelector('li.on-now');
+        scrollNowBtn.style.display = nowLi ? 'block' : 'none';
+    } else {
+        scrollNowBtn.style.display = 'none';
+    }
 }
 
 async function init() {
@@ -376,4 +398,24 @@ async function init() {
 init().catch(err => {
     console.error('Startup error', err);
     document.getElementById('loading').textContent = 'Error loading.';
+});
+
+const scrollTopBtn = document.getElementById("scroll-top");
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const scrollNowBtn = document.getElementById("scroll-now");
+
+scrollNowBtn.addEventListener("click", () => {
+    const todaySchedule = allSchedules[currentDayIndex];
+    if (!todaySchedule) return;
+
+    const nowLi = todaySchedule.element.querySelector('li.on-now');
+    if (nowLi) {
+        const offset = 20; // optional padding from top
+        const topPos = nowLi.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }
 });

@@ -11,37 +11,7 @@ document.getElementById('footer-year').textContent = yearText;
 // Channel Categories
 // ==========================
 const categories = [
-    { name: "Entertainment & Documentaries", min: 100, max: 199 },
-    { name: "Entertainment & Documentaries +1", min: 201, max: 299 },
-    { name: "Movies", min: 300, max: 339 },
-    { name: "HD Entertainment & Documentaries", min: 340, max: 349 },
-    { name: "Music", min: 350, max: 399 },
-    {
-        name: "Sports",
-        custom: (c, n) => (n >= 401 && n <= 499 && n !== 493) || (n >= 3006 && n <= 3011),
-    },
-    { name: "News", min: 501, max: 579 },
-    { name: "Religion", min: 580, max: 599 },
-    { name: "Kids", min: 601, max: 659 },
-    { name: "Shopping", min: 660, max: 699 },
-    { name: "International", min: 701, max: 799 },
-    {
-        name: "Secondary",
-        custom: (c, n) => (n >= 801 && n <= 856) || (n >= 859 && n <= 898)
-    },
-    {
-        name: "Regional & Interactive",
-        custom: (c, n) => (n >= 951 && n <= 979) || (n >= 8022 && n <= 8079)
-    },
-    {
-        name: "Information",
-        custom: (c, n) => n === 899 || n === 950 || n === 996 || n === 998
-    },
-    {
-        name: "Radio",
-        isRadio: true,
-        custom: (c, n) => /Radio/i.test(c.name) || (n >= 3101 && n <= 3250)
-    },
+    { name: "Entertainment & Documentaries", min: 1, max: 199 },
 ];
 
 // ==========================
@@ -267,4 +237,10 @@ clearBtn.addEventListener("click", () => {
     searchInput.value = "";
     clearBtn.style.display = "none";
     searchInput.dispatchEvent(new Event("input"));
+});
+
+const scrollTopBtn = document.getElementById("scroll-top");
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
