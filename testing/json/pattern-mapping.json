@@ -1,0 +1,217 @@
+[
+    {
+        "pattern": "^STV News",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/111/279632.jpg"
+    },
+    {
+        "pattern": "^SuperKitties.+",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/435/1089109.jpg"
+    },
+    {
+        "pattern": "^That's 80s.+",
+        "flags": "i",
+        "url": "images/That's_80s_block.png"
+    },
+    {
+        "pattern": "^That's 60s.+",
+        "flags": "i",
+        "url": "images/That's_60s_block.png"
+    },
+    {
+        "pattern": "^That's Rock.+",
+        "flags": "i",
+        "url": "images/Music_Live.png"
+    },
+    {
+        "pattern": "^That's Oldies:.+",
+        "flags": "i",
+        "url": "images/Classic_Music_Hits.png"
+    },
+    {
+        "pattern": "^London News (at|Replay)",
+        "flags": "i",
+        "url": "images/London_News.png"
+    },
+    {
+        "pattern": "^Dáil Éireann.+",
+        "flags": "i",
+        "url": "images/Dáil_Éireann.png"
+    },
+    {
+        "pattern": ".*(Horse racing|Horseracing|Stateside Live|Racing Live|Raceday Live|Race day Live|Racing To Win|Hong Kong Live).*",
+        "flags": "i",
+        "url": "images/Horse_Racing.png"
+    },
+    {
+        "pattern": "ITV Racing.*",
+        "flags": "i",
+        "url": "images/ITV_Racing.png"
+    },
+    {
+        "pattern": ".*(programmes start|Off air|Off-air|Airing Break).*",
+        "flags": "i",
+        "url": "images/Programmes.png"
+    },
+    {
+        "pattern": "Catfish.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/449/1123769.jpg"
+    },
+    {
+        "pattern": "James Martin: Home Comforts.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/34/87156.jpg"
+    },
+    {
+        "pattern": ".*Great British (Bake Off|Bake-Off).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/585/1464906.jpg"
+    },
+    {
+        "pattern": ".*(Hairy Bikers[:']|Hairy Bikers At).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/211/529457.jpg"
+    },
+    {
+        "pattern": ".*(Jamie Oliver[:']|Jamie's Night Before Christmas|Jamie's Kids' Best Ever Christmas|Jamie's Ultimate Christmas).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/354/886336.jpg"
+    },
+    {
+        "pattern": "Brit Cops.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/60/151519.jpg"
+    },
+    {
+        "pattern": "Sky News.*",
+        "flags": "i",
+        "url": "images/Sky_News_listing.png"
+    },
+    {
+        "pattern": ".*UEFA.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/357/892585.jpg"
+    },
+    {
+        "pattern": ".*FIFA.*",
+        "flags": "i",
+        "url": "images/FIFA.png"
+    },
+    {
+        "pattern": "Emmerdale.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/13/34218.jpg"
+    },
+    {
+        "pattern": "Coronation Street.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/598/1495734.jpg"
+    },
+    {
+        "pattern": "EastEnders.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/6/15519.jpg"
+    },
+    {
+        "pattern": ".*Panaroma",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/596/1490794.jpg"
+    },
+    {
+        "pattern": "Strictly Come Dancing.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/589/1474861.jpg"
+    },
+    {
+        "pattern": "(MOTD|Match of the Day).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/582/1456547.jpg"
+    },
+    {
+        "pattern": ".*Latest News and Weather.*",
+        "flags": "i",
+        "url": "images/RTE_News_promo.png"
+    },
+    {
+        "pattern": ".*(Weather|An Aimsir Láithreach).*",
+        "flags": "i",
+        "url": "images/Weather.png"
+    },
+    {
+        "pattern": ".*Children (in|In) Need.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/282/707077.jpg"
+    },
+    {
+        "pattern": "Songs of Praise.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/25/62782.jpg"
+    },
+    {
+        "pattern": ".*Sarah Millican.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/original_untouched/34/86896.jpg"
+    },
+    {
+        "pattern": ".*South Park.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/594/1485766.jpg"
+    },
+    {
+        "pattern": ".*Tom (&|and|And) Jerry.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/483/1209807.jpg"
+    },
+    {
+        "pattern": ".*(Sky Sports (News|Breakfast)|SSN @ 10).*",
+        "flags": "i",
+        "url": "images/Sky_Sports_News_Studio.png"
+    },
+    {
+        "pattern": "^(Teleshopping|Shop on TV|Shop:|JML Presents|Shop:.*)$",
+        "flags": "i",
+        "url": "images/Teleshopping.png"
+    },
+    {
+        "pattern": "^(7Lá|7 Lá|Seacht Lá)$",
+        "flags": "i",
+        "url": "images/7Lá.jpg"
+    },
+    {
+        "pattern": "^(EuroNews|Euronews)$",
+        "flags": "i",
+        "url": "images/EU_flag_long.png"
+    },
+    {
+        "pattern": "^(60s (and|And|&) 70s Music Live!|60s Rock Around the Clock|Rock Royalty|Rock Solid!|Monsters (of|Of) Rock!)$",
+        "flags": "i",
+        "url": "images/Music_Live.png"
+    },
+    {
+        "pattern": "^Who Wants (To|to) Be (A|a).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/561/1403759.jpg"
+    },
+    {
+        "pattern": "BBC.*News",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/34/86217.jpg"
+    },
+    {
+        "pattern": "ITV.*News",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/99/248590.jpg"
+    },
+    {
+        "pattern": ".*News with (Signing|ISL).*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/549/1373693.jpg"
+    },
+    {
+        "pattern": ".*Good News (from|on) GREAT.*",
+        "flags": "i",
+        "url": "images/Good_News.png"
+    }
+]
