@@ -213,5 +213,45 @@
         "pattern": ".*Good News (from|on) GREAT.*",
         "flags": "i",
         "url": "images/Good_News.png"
+    },
+    {
+        "pattern": ".*NFL.*",
+        "flags": "i",
+        "url": "images/NFL.png"
+    },
+    {
+        "pattern": "(Fireman Sam|Sam Tân|Sam, an Fear Dóiteáin)",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/542/1356056.jpg"
+    },
+    {
+        "pattern": "(’|')71",
+        "flags": "i",
+        "url": "images/71.png"
+    },
+    {
+        "pattern": "Jasmine Harman's Renovation in.*",
+        "flags": "i",
+        "url": "images/Jasmine_Harman.png"
+    },
+    {
+        "pattern": "Minnie's Bow-Toons.*",
+        "flags": "i",
+        "url": "images/Minnies_Bow_Toons.png"
+    },
+    {
+        "pattern": "Disney Junior Ariel.*",
+        "flags": "i",
+        "url": "images/Disney_Junior_Ariel.png"
+    },
+    {
+        "pattern": ".*Walter Presents.*",
+        "flags": "i",
+        "url": "images/Walter_Presents.png"
+    },
+    {
+        "pattern": "Taskmaster.*",
+        "flags": "i",
+        "url": "https://static.tvmaze.com/uploads/images/medium_portrait/587/1467935.jpg"
     }
 ]

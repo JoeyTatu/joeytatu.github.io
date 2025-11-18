@@ -6,55 +6,109 @@
   <title>Sky TV Guide - Channels</title>
   <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
   <link rel="stylesheet" href="css/global-style.css">
-  <link rel="stylesheet" href="css/index-style.css"> <!-- Overrides global-style -->
+  <link rel="stylesheet" href="css/index-style.css">
+  <link rel="stylesheet" href="css/header-style.css">
 </head>
 
-<body>
-  <button id="theme-toggle" aria-label="Toggle dark mode">
-    🌙<span class="theme-label">DARK<br>MODE</span>
-  </button>
+<header class="site-header">
+  <div class="header-top">
 
-  <header>
-    <a href="index.html">
+    <!-- Logo -->
+    <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="TVBridge Logo" class="header-logo">
     </a>
-    <br>
-    <button class="return" onclick="location.href='/'">← Go to TVBridge</button>
 
-    <h1>Sky TV Guide - Channels</h1>
-    <p>TV listings for Sky in the United Kingdom and Ireland</p>
-    <p>Select a channel to view listings</p>
+    <!-- Nav + Search wrapper -->
+    <div class="nav-search-wrapper">
+      <nav class="main-nav">
+        <a class="nav-item active" href="index.html">
+          <span class="nav-icon">
+            <!-- Home Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10L12 4L21 10V20H3V10Z"></path>
+            </svg>
+          </span>
+          <span class="nav-label">Home</span>
+        </a>
 
-    <div id="search-container">
-      <input type="text" id="search-input" placeholder="🔎 Search for channels...">
-      <button id="clear-search" style="display: none;">✖</button>
+        <a class="nav-item" href="about.html">
+          <span class="nav-icon">
+            <!-- About Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8V12"></path>
+              <circle cx="12" cy="16" r="1" fill="currentColor"></circle>
+            </svg>
+          </span>
+          <span class="nav-label">About</span>
+        </a>
+
+        <a class="nav-item" href="contact.html">
+          <span class="nav-icon">
+            <!-- Contact Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4H20V16H5L4 17V4Z"></path>
+              <path d="M4 4L12 11L20 4"></path>
+            </svg>
+          </span>
+          <span class="nav-label">Contact</span>
+        </a>
+
+        <a class="nav-item" href="tv-guide.html">
+          <span class="nav-icon">
+            <!-- TV Guide Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="13" rx="2"></rect>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </span>
+          <span class="nav-label">TV Guide</span>
+        </a>
+      </nav>
+
+      <!-- Search -->
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="🔎 Search channels...">
+        <button id="clear-search">✖</button>
+      </div>
     </div>
-  </header>
 
-  <main class="channels-container">
-    <section class="channel-column" id="uk-column">
-      <h2 style="text-align:center;">United Kingdom</h2>
-      <div id="channels-uk-list" class="channels-list"></div>
-    </section>
+  </div>
+</header>
 
-    <section class="channel-column" id="ireland-column">
-      <h2 style="text-align:center;">Ireland</h2>
-      <div id="channels-ireland-list" class="channels-list"></div>
-    </section>
-  </main>
+<button id="theme-toggle" aria-label="Toggle dark mode">
+  🌙<span class="theme-label">DARK<br>MODE</span>
+</button>
 
-  <button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
+<main class="channels-container">
+  <section class="channel-column" id="uk-column">
+    <h2 style="text-align:center;">United Kingdom</h2>
+    <div id="channels-uk-list" class="channels-list"></div>
+  </section>
 
-  <footer>
-    <small>Programme images may not be accurate. Channel logos and programme images are copyright of their
-      respective
-      owners.</a> |<span class="footer-break"> &copy; <span id="footer-year"></span> TVBridge.com — All Rights
-        Reserved — 📧
-        <a href="mailto:admin@TVBridge.com">admin@TVBridge.com</a>
-    </small>
-  </footer>
-  <script src="js/index-script.js" defer></script>
-  <script src="js/theme.js" defer></script>
+  <section class="channel-column" id="ireland-column">
+    <h2 style="text-align:center;">Ireland</h2>
+    <div id="channels-ireland-list" class="channels-list"></div>
+  </section>
+</main>
+
+<button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
+
+<footer>
+  <small>Programme images may not be accurate. Channel logos and programme images are copyright of their
+    respective
+    owners.</a> |<span class="footer-break"> &copy; <span id="footer-year"></span> TVBridge.com — All Rights
+      Reserved — 📧
+      <a href="mailto:admin@TVBridge.com">admin@TVBridge.com</a>
+  </small>
+</footer>
+<script src="js/index-script.js" defer></script>
+<script src="js/theme.js" defer></script>
+<script src="js/header-script.js" defer></script>
 </body>
 
 </html>
