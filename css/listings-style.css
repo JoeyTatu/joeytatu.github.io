@@ -1,3 +1,7 @@
+/* ------------------------- */
+/* DEFAULT (DESKTOP / LARGE) */
+/* ------------------------- */
+
 h1,
 h2 {
     color: #222;
@@ -58,7 +62,7 @@ li {
 
 #schedule {
     text-align: left;
-    width: 70%;
+    width: 45%;
     margin: 0 auto;
 }
 
@@ -76,4 +80,40 @@ li {
     border-left: 4px solid yellow;
     border-right: 4px solid yellow;
     background-color: #ffffb3;
+}
+
+/* ---------------------- */
+/* SMALL SCREEN (<600px)  */
+/* ---------------------- */
+
+@media (max-width: 600px) {
+
+    #schedule {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .programme-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .programme-text {
+        text-align: center;
+    }
+
+    .synopsis {
+        margin-left: 0;
+        margin-top: 0.5em;
+    }
+
+    .logo-container img.logo {
+        max-width: 200px;
+    }
 }
