@@ -21,7 +21,7 @@
     <!-- Nav + Search wrapper -->
     <div class="nav-search-wrapper">
       <nav class="main-nav">
-        <a class="nav-item active" href="index.html">
+        <a class="nav-item" href="index.html">
           <span class="nav-icon">
             <!-- Home Icon -->
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -57,7 +57,7 @@
           <span class="nav-label">Contact</span>
         </a>
 
-        <a class="nav-item" href="tv-guide.html">
+        <a class="nav-item active" href="tv-guide.html">
           <span class="nav-icon">
             <!-- TV Guide Icon -->
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -71,11 +71,11 @@
       </nav>
 
       <!-- Search -->
-      <!-- <div id="search-container">
+      <div id="search-container">
         <input type="text" id="search-input" placeholder="🔎 Search channels...">
         <button id="clear-search">✖</button>
       </div>
-    </div> -->
+    </div>
 
   </div>
 </header>
@@ -84,7 +84,17 @@
   🌙<span class="theme-label">DARK<br>MODE</span>
 </button>
 
-<!-- #########################-->
+<main class="channels-container">
+  <section class="channel-column" id="uk-column">
+    <h2 style="text-align:center;">United Kingdom</h2>
+    <div id="channels-uk-list" class="channels-list"></div>
+  </section>
+
+  <section class="channel-column" id="ireland-column">
+    <h2 style="text-align:center;">Ireland</h2>
+    <div id="channels-ireland-list" class="channels-list"></div>
+  </section>
+</main>
 
 <button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
 
@@ -96,6 +106,7 @@
       <a href="mailto:admin@TVBridge.com">admin@TVBridge.com</a>
   </small>
 </footer>
+<script src="js/tvguide-script.js" defer></script>
 <script src="js/theme.js" defer></script>
 <script src="js/header-script.js" defer></script>
 </body>
