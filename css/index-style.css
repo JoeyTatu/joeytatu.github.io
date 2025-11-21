@@ -1,0 +1,159 @@
+/* Main container */
+.main-slider-container {
+    display: flex;
+    width: 100%;
+    margin: 40px auto;
+    gap: 20px;
+    align-items: stretch;
+    /* ensures children stretch to equal height */
+}
+
+/* Left large slider */
+.left-slider {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slides container */
+.left-slider .slides {
+    position: relative;
+}
+
+/* Individual slide */
+.left-slider .slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    /* eased transition */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.left-slider .slide.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+}
+
+/* Card containing image and text */
+.slide-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Image on top, scaled to fit fully */
+.slide-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Text content */
+.slide-content {
+    padding: 20px 30px;
+    animation: fadeInUp 1s ease forwards 0.2s;
+}
+
+.slide-content h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.slide-content p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #555;
+}
+
+/* Right stacked sections */
+.right-stack {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* top and bottom sections fixed */
+    height: 900px;
+    /* match left slider height */
+    gap: 20px;
+}
+
+.side-section {
+    flex: 1;
+    /* each takes 50% */
+    min-height: 0;
+    /* important for flexbox */
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: all 1.5s ease-in-out;
+    /* smooth changes */
+}
+
+.side-section p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Images inside right sections */
+.side-section img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* ensures full image visible */
+    border-radius: 8px;
+    transition: all 1.5s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .main-slider-container {
+        flex-direction: column;
+    }
+
+    .left-slider,
+    .right-stack {
+        flex: 0 0 100%;
+    }
+
+    .right-stack {
+        flex-direction: row;
+        gap: 10px;
+        height: auto;
+    }
+
+    .side-section {
+        flex: 1;
+    }
+}

@@ -55,6 +55,13 @@
 10. Comments
       MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Comment
       W3Schools: https://www.w3schools.com/html/html_comments.asp
+
+Images used in Slider:
+extended-family.jpg: Image by René Schindler from Pixabay
+popcorn.jpg: Image by yousafbhutta from Pixabay
+remote-control.jpg: Image by Renate Köppel from Pixabay
+remote-control-tv.jpg: Image by Mohamed Hassan from Pixabay
+bears-watching-tv.jpg: Image by Peter Fischer from Pixabay
 -->
 
 <!DOCTYPE html>
@@ -65,8 +72,8 @@
   <title>Sky TV Guide - Channels</title>
   <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
   <link rel="stylesheet" href="css/global-style.css">
-  <link rel="stylesheet" href="css/tvguide-style.css">
   <link rel="stylesheet" href="css/header-style.css">
+  <link rel="stylesheet" href="css/index-style.css">
 </head>
 
 <header class="site-header">
@@ -136,14 +143,88 @@
       </div>
     </div> -->
 
-  </div>
+    </div>
 </header>
 
 <button id="theme-toggle" aria-label="Toggle dark mode">
   🌙<span class="theme-label">DARK<br>MODE</span>
 </button>
 
-<!-- #########################-->
+<section class="main-slider-container">
+  <!-- Left large slider -->
+  <div class="left-slider">
+    <div class="slides">
+      <div class="slide active">
+        <div class="slide-card">
+          <img src="images/extended-family.jpg" alt="Extended family watching TV">
+          <div class="slide-content">
+            <h1>TVBridge — All Your Shows, One Place</h1>
+            <p>Discover what's on tonight and never miss a moment with TVBridge.</p>
+            <a href="tv-guide.html" class="custom-btn">Explore TV Guide</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-card">
+          <img src="images/popcorn.jpg" alt="Family with popcorn">
+          <div class="slide-content">
+            <h1>Plan Your Viewing</h1>
+            <p>Search by channel, genre, or your favorite shows effortlessly.</p>
+            <a href="tv-guide.html" class="custom-btn">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-card">
+          <img src="images/remote-control.jpg" alt="Remote control on table">
+          <div class="slide-content">
+            <h1>Control Your Entertainment</h1>
+            <p>All your TV schedules in one place, easy to browse and enjoy.</p>
+            <a href="tv-guide.html" class="custom-btn">View Guide</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-card">
+          <img src="images/remote-control-tv.jpg" alt="Couple controlling TV">
+          <div class="slide-content">
+            <h1>Entertainment for Everyone</h1>
+            <p>From movies to documentaries, find it all with TVBridge.</p>
+            <a href="tv-guide.html" class="custom-btn">Explore Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-card">
+          <img src="images/bears-watching-tv.jpg" alt="Bears watching TV illustration">
+          <div class="slide-content">
+            <h1>Share the Moment</h1>
+            <p>Enjoy TV with family and friends, all scheduled in one place.</p>
+            <a href="tv-guide.html" class="custom-btn">Start Watching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right stacked sections -->
+  <div class="right-stack">
+    <div class="side-section" id="side-top">
+      <p id="side-text-top">Catch all your favourites!</p>
+      <img id="side-image-top" src="images/popcorn.jpg" alt="Side image top">
+    </div>
+
+    <div class="side-section" id="side-bottom">
+      <p id="side-text-bottom">Never miss a show!</p>
+      <img id="side-image-bottom" src="images/remote-control.jpg" alt="Side image bottom">
+    </div>
+  </div>
+</section>
+
 
 <button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
 
@@ -157,6 +238,7 @@
 </footer>
 <script src="js/theme.js" defer></script>
 <script src="js/header-script.js" defer></script>
+<script src="js/index-script.js" defer></script>
 </body>
 
 </html>

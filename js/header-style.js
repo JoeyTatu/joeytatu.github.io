@@ -1,4 +1,6 @@
-/* References
+/* Note: This file is not used. However, it's kept to show how it would be used.
+
+  References
 
    1. DOMContentLoaded:
       - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
