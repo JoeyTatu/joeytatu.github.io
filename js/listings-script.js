@@ -1,3 +1,56 @@
+/* References
+
+   1. Dates & Times (Date object, UTC, DST):
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+      - W3Schools: https://www.w3schools.com/js/js_date_methods.asp
+      - JavaScript.info: https://javascript.info/date
+      - DST & UTC examples: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+
+   2. URL Parameters (URLSearchParams):
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+      - W3Schools: https://www.w3schools.com/jsref/met_urlsearchparams_get.asp
+      - JavaScript.info: https://javascript.info/url#urlsearchparams
+
+   3. Fetch API & Async/Await:
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+      - W3Schools: https://www.w3schools.com/js/js_api_fetch.asp
+      - JavaScript.info: https://javascript.info/fetch
+
+   4. DOM Manipulation (createElement, appendChild, textContent, dataset):
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+      - W3Schools: https://www.w3schools.com/jsref/dom_obj_all.asp
+
+   5. Class Management & Conditional Styling:
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+      - W3Schools: https://www.w3schools.com/jsref/prop_element_classlist.asp
+      - JavaScript.info: https://javascript.info/classlist
+
+   6. Event Listeners (click, setInterval):
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+      - W3Schools: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+      - JavaScript.info: https://javascript.info/introduction-browser-events
+
+   7. Smooth Scrolling:
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      - W3Schools: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+
+   8. Maps & Caching:
+      - MDN Map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+      - W3Schools: https://www.w3schools.com/js/js_maps.asp
+
+   9. Regular Expressions:
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+      - W3Schools: https://www.w3schools.com/js/js_regexp.asp
+      - JavaScript.info: https://javascript.info/regular-expressions
+
+   10. Error Handling (try/catch):
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+      - W3Schools: https://www.w3schools.com/js/js_errors.asp
+      - JavaScript.info: https://javascript.info/try-catch
+*/
+
 const startYear = 2025;
 const currentYear = new Date().getFullYear();
 const yearText = currentYear === startYear ? `${startYear}` : `${startYear}-${currentYear}`;

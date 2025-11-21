@@ -1,6 +1,31 @@
-/* ============================================
-   TVGUIDE STYLES
-   ============================================ */
+/* References
+
+   1. Responsive Design & Media Queries:
+      - W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      - CSS-Tricks: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+   2. Flexbox Layout (horizontal & vertical stacking):
+      - W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+      - CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   3. Text Wrapping & Word Breaks:
+      - W3Schools: https://www.w3schools.com/css/css_text.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/w/white-space/
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/w/word-break/
+
+   4. Dark Mode Styling:
+      - W3Schools: https://www.w3schools.com/howto/howto_css_dark_mode.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+      - CSS-Tricks: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+
+   5. Inline Block & Minimum Width (channel names):
+      - W3Schools: https://www.w3schools.com/css/css_inline-block.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/d/display/
+*/
 
 /* Hide Now & Next under 500px */
 @media (max-width: 500px) {

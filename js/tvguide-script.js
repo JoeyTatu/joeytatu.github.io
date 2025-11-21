@@ -1,3 +1,68 @@
+/*  References
+
+1. Date and Time
+   - new Date(), getFullYear(), toISOString():
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+     W3Schools: https://www.w3schools.com/js/js_dates.asp
+   - Date manipulation (add days, format):
+     JavaScript.info: https://javascript.info/date
+
+2. Arrays
+   - Array methods: map(), filter(), find(), forEach(), push()
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+     W3Schools: https://www.w3schools.com/js/js_array_methods.asp
+   - Array destructuring and spread operator ([...])
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+3. Objects and Maps
+   - Object.keys(), object property access
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+   - Map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+4. DOM Manipulation
+   - document.getElementById(), createElement(), querySelector(), innerHTML
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+   - element.style, element.classList
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+     W3Schools: https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+5. Fetch API (asynchronous HTTP requests)
+   - fetch(), async/await, try/catch
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+     W3Schools: https://www.w3schools.com/js/js_api_fetch.asp
+   - Handling JSON responses: response.json()
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/Response/json
+
+6. Promises & Async/Await
+   - Promise.all(), async functions
+     MDN: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+     JavaScript.info: https://javascript.info/async-await
+
+7. String Manipulation
+   - normalize(), replace(), match(), toLowerCase(), trim()
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+     W3Schools: https://www.w3schools.com/js/js_string_methods.asp
+
+8. Event Listeners
+   - addEventListener("input"/"click")
+     MDN: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+     W3Schools: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+
+9. Conditional (Ternary) Operator
+   - Syntax: condition ? exprIfTrue : exprIfFalse
+     MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+     W3Schools: https://www.w3schools.com/js/js_comparisons.asp
+
+10. Template Literals
+    - Backticks ``, ${expression} interpolation
+      MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+      W3Schools: https://www.w3schools.com/js/js_strings.asp
+
+11. Smooth Scrolling
+    - window.scrollTo({ top, behavior: "smooth" })
+      MDN: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+*/
 
 // ==========================
 // Footer year auto-update

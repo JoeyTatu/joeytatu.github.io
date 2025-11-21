@@ -1,4 +1,56 @@
-/* Theme Variables */
+/* References
+
+   1. CSS Variables & Theming:
+      - W3Schools: https://www.w3schools.com/css/css3_variables.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+      - CSS-Tricks: https://css-tricks.com/guides/css-variables/
+
+   2. Dark Mode:
+      - W3Schools: https://www.w3schools.com/howto/howto_css_dark_mode.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+      - CSS-Tricks: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+
+   3. Layout & Flexbox:
+      - W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+      - CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   4. Box Model, Padding, Margin, Borders, Shadow:
+      - W3Schools: https://www.w3schools.com/css/css_box.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/b/box-shadow/
+
+   5. Text & Fonts:
+      - W3Schools: https://www.w3schools.com/css/css_font.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/f/font-family/
+
+   6. Navigation & Links:
+      - W3Schools: https://www.w3schools.com/css/css_link.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+      - CSS-Tricks: https://css-tricks.com/almanac/selectors/h/hover/
+
+   7. Buttons & Interactive States:
+      - W3Schools: https://www.w3schools.com/css/css_buttons.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Buttons
+      - CSS-Tricks: https://css-tricks.com/snippets/css/styling-cross-browser-compatible-buttons/
+
+   8. Forms & Inputs:
+      - W3Schools: https://www.w3schools.com/css/css_form.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text_inputs
+      - CSS-Tricks: https://css-tricks.com/snippets/css/styling-cross-browser-compatible-inputs/
+
+   9. Responsive Design & Media Queries:
+      - W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      - CSS-Tricks: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+   10. Transitions & Hover Effects:
+      - W3Schools: https://www.w3schools.com/css/css3_transitions.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/t/transition/
+*/
+
 :root {
   --accent: #0d6efd;
   --radius: 10px;

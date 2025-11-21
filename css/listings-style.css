@@ -1,6 +1,40 @@
-/* ------------------------- */
-/* DEFAULT (DESKTOP / LARGE) */
-/* ------------------------- */
+/* References
+
+   1. Headings & Text:
+      - W3Schools: https://www.w3schools.com/css/css_font.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/f/font-weight/
+
+   2. Lists (ul, li):
+      - W3Schools: https://www.w3schools.com/css/css_list.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/l/list-style/
+
+   3. Box Model (padding, margin, border, border-radius, box-shadow):
+      - W3Schools: https://www.w3schools.com/css/css_box.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/b/box-shadow/
+
+   4. Flexbox (layout of li items and responsive arrangement):
+      - W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+      - CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   5. Images (object-fit, responsive logos):
+      - W3Schools: https://www.w3schools.com/css/css3_object-fit.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/o/object-fit/
+
+   6. Responsive Design / Media Queries:
+      - W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      - CSS-Tricks: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+   7. Highlights / Status styles (.past, .on-now, .on-next):
+      - W3Schools: https://www.w3schools.com/css/css_border.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/border
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/b/border/
+*/
 
 h1,
 h2 {

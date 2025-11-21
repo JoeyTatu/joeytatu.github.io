@@ -1,8 +1,57 @@
-/* ============================================
-   GLOBAL STYLES
-   ============================================ */
+/* References
 
-/* Reset body */
+   1. Layout & Flexbox:
+      - W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+      - CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   2. Box Model, Padding, Margin, Borders, Shadow:
+      - W3Schools: https://www.w3schools.com/css/css_box.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/b/box-shadow/
+
+   3. Text, Headings, Links:
+      - W3Schools: https://www.w3schools.com/css/css_text.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/t/text-align/
+      - freeCodeCamp: https://www.freecodecamp.org/news/css-text-properties/
+
+   4. Images & Logos:
+      - W3Schools: https://www.w3schools.com/css/css3_object-fit.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/o/object-fit/
+
+   5. Lists:
+      - W3Schools: https://www.w3schools.com/css/css_list.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/l/list-style/
+
+   6. Forms & Inputs:
+      - W3Schools: https://www.w3schools.com/css/css_form.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text_inputs
+      - CSS-Tricks: https://css-tricks.com/snippets/css/styling-cross-browser-compatible-inputs/
+
+   7. Buttons:
+      - W3Schools: https://www.w3schools.com/css/css_buttons.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Buttons
+      - CSS-Tricks: https://css-tricks.com/snippets/css/styling-cross-browser-compatible-buttons/
+
+   8. Dark Mode / Theme Toggle:
+      - W3Schools: https://www.w3schools.com/howto/howto_css_dark_mode.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+      - CSS-Tricks: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+
+   9. Responsive Design & Media Queries:
+      - W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      - CSS-Tricks: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+   10. Transitions & Animations:
+      - W3Schools: https://www.w3schools.com/css/css3_transitions.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/t/transition/
+
+*/
 body {
   font-family: Arial, sans-serif;
   background: #f8f8f8;
