@@ -116,6 +116,26 @@ li {
     background-color: #ffffb3;
 }
 
+/* Channel Listings button aligned left */
+#channel-list {
+    margin: 10px 0;
+    /* vertical spacing */
+    float: left;
+    /* aligns it to the left */
+}
+
+/* Optional: clear float for subsequent elements */
+#channel-info,
+#schedule {
+    clear: both;
+    background-color: #ffd95c;
+}
+
+body.dark-mode #channel-info,
+body.dark-mode #schedule {
+    background-color: #111;
+}
+
 /* ---------------------- */
 /* SMALL SCREEN (<600px)  */
 /* ---------------------- */

@@ -52,9 +52,10 @@
       - CSS-Tricks: https://css-tricks.com/almanac/properties/t/transition/
 
 */
+
 body {
+  background: #82d2f3;
   font-family: Arial, sans-serif;
-  background: #f8f8f8;
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -304,10 +305,12 @@ footer a:hover {
   text-align: center;
   transition: background 0.3s, color 0.3s, transform 0.2s;
   white-space: pre;
+  font-weight: bold;
   /* respect line breaks in label */
 }
 
 #theme-toggle:hover {
+  background-color: lightgray;
   transform: scale(1.06);
 }
 
@@ -619,19 +622,36 @@ li {
 
 /* Main button styling */
 .custom-btn {
-  background-color: var(--bs-primary);
-  border: none;
-  padding: 16px 0;
-  font-size: 16px;
+  background-color: grey;
+  color: #fff;
+  border: 2px solid #ffd95c;
   font-weight: bold;
-  border-radius: 30px;
-  /* pill shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s, transform 0.2s;
-  white-space: nowrap;
+  box-shadow:
+    0 0 0 0 #ffd95c,
+    /* initial solid border */
+    0 0 20px 10px rgba(255, 217, 92, 0.4);
+  /* fading glow */
+  transition: box-shadow 0.3s, transform 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+}
+
+.custom-btn:hover {
+  background-color: #000;
+  box-shadow: 0 0 30px 15px rgba(255,217,92,0.5);
+  transform: translateY(-2px); /* optional lift */
+}
+
+body.dark-mode .custom-btn {
+  color: #fff;
+  background-color: grey;
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 0 0 #fff,
+    0 0 20px 10px grey;
+  transition: box-shadow 0.3s, transform 0.2s;
 }
 
 /* Positioning (unchanged) */
@@ -640,7 +660,6 @@ li {
 #prev-day,
 #next-day {
   position: fixed;
-  width: 120px;
   z-index: 9999;
 }
 
@@ -666,22 +685,24 @@ li {
   width: 130px;
 }
 
-/* Wider desktop button */
-.return {
-  width: 180px;
-}
-
 /* Hover */
-.custom-btn:hover {
+/* .custom-btn:hover {
   background-color: var(--button-hover);
   transform: scale(1.05);
 }
 
-/* Dark mode support */
+
 body.dark-mode .custom-btn {
   background-color: #444;
 }
 
 body.dark-mode .custom-btn:hover {
   background-color: #222;
+} */
+
+#logo-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

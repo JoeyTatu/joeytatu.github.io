@@ -56,14 +56,16 @@
       MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Comment
       W3Schools: https://www.w3schools.com/html/html_comments.asp
 
-Images used in Slider:
-extended-family.jpg: Image by René Schindler from Pixabay
-popcorn.jpg: Image by yousafbhutta from Pixabay
-remote-control.jpg: Image by Renate Köppel from Pixabay
-remote-control-tv.jpg: Image by Mohamed Hassan from Pixabay
-bears-watching-tv.jpg: Image by Peter Fischer from Pixabay
--->
+11.  Welcome blurb
+      Text within the welcome blurb section was created by ChatGPT.
 
+12.  Images used in Slider:
+      extended-family.jpg: Image by René Schindler from Pixabay
+      popcorn.jpg: Image by yousafbhutta from Pixabay
+      remote-control.jpg: Image by Renate Köppel from Pixabay
+      remote-control-tv.jpg: Image by Mohamed Hassan from Pixabay
+      bears-watching-tv.jpg: Image by Peter Fischer from Pixabay
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,6 +73,7 @@ bears-watching-tv.jpg: Image by Peter Fischer from Pixabay
   <meta charset="UTF-8">
   <title>Sky TV Guide - Channels</title>
   <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/global-style.css">
   <link rel="stylesheet" href="css/header-style.css">
   <link rel="stylesheet" href="css/index-style.css">
@@ -151,82 +154,52 @@ bears-watching-tv.jpg: Image by Peter Fischer from Pixabay
 </button>
 
 <section class="main-slider-container">
-  <!-- Left large slider -->
-  <div class="left-slider">
-    <div class="slides">
-      <div class="slide active">
-        <div class="slide-card">
-          <img src="images/extended-family.jpg" alt="Extended family watching TV">
-          <div class="slide-content">
-            <h1>TVBridge — All Your Shows, One Place</h1>
-            <p>Discover what's on tonight and never miss a moment with TVBridge.</p>
-            <a href="tv-guide.html" class="custom-btn">Explore TV Guide</a>
-          </div>
-        </div>
-      </div>
+  <!-- Top row -->
+  <div class="top-row">
+    <!-- Welcome blurb -->
+    <div class="welcome-blurb">
+      <img id="logo-image" src="images/logo.png">
+      <h2>Welcome to TVBridge!</h2>
+      <p>
+        Discover what's on tonight, plan your viewing, and never miss your favourite shows.
+        With TVBridge, you can browse upcoming episodes, track your must-watch series,
+        and explore movies and specials all in one place. Stay up to date with the latest
+        releases, find recommendations tailored to your tastes, and make every evening
+        an enjoyable viewing experience. Your entertainment, your way—effortless and
+        organised.
+      </p>
+    </div>
 
-      <div class="slide">
-        <div class="slide-card">
-          <img src="images/popcorn.jpg" alt="Family with popcorn">
-          <div class="slide-content">
-            <h1>Plan Your Viewing</h1>
-            <p>Search by channel, genre, or your favorite shows effortlessly.</p>
-            <a href="tv-guide.html" class="custom-btn">Get Started</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="slide">
-        <div class="slide-card">
-          <img src="images/remote-control.jpg" alt="Remote control on table">
-          <div class="slide-content">
-            <h1>Control Your Entertainment</h1>
-            <p>All your TV schedules in one place, easy to browse and enjoy.</p>
-            <a href="tv-guide.html" class="custom-btn">View Guide</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="slide-card">
-          <img src="images/remote-control-tv.jpg" alt="Couple controlling TV">
-          <div class="slide-content">
-            <h1>Entertainment for Everyone</h1>
-            <p>From movies to documentaries, find it all with TVBridge.</p>
-            <a href="tv-guide.html" class="custom-btn">Explore Now</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="slide-card">
-          <img src="images/bears-watching-tv.jpg" alt="Bears watching TV illustration">
-          <div class="slide-content">
-            <h1>Share the Moment</h1>
-            <p>Enjoy TV with family and friends, all scheduled in one place.</p>
-            <a href="tv-guide.html" class="custom-btn">Start Watching</a>
-          </div>
-        </div>
+    <!-- Right featured show -->
+    <div class="right-stack">
+      <div class="side-section" id="side-featured">
+        <p id="side-text-featured">Catch all your favourites!</p>
+        <img id="side-image-featured" src="" alt="Featured show">
       </div>
     </div>
   </div>
 
-  <!-- Right stacked sections -->
-  <div class="right-stack">
-    <div class="side-section" id="side-top">
-      <p id="side-text-top">Catch all your favourites!</p>
-      <img id="side-image-top" src="images/popcorn.jpg" alt="Side image top">
-    </div>
-
-    <div class="side-section" id="side-bottom">
-      <p id="side-text-bottom">Never miss a show!</p>
-      <img id="side-image-bottom" src="images/remote-control.jpg" alt="Side image bottom">
+  <!-- Bottom row: main slider -->
+  <div class="bottom-row">
+    <div class="left-slider">
+      <div class="slides">
+        <div class="slide active">
+          <div class="slide-card">
+            <img src="images/extended-family.jpg" alt="Extended family watching TV">
+            <div class="slide-content">
+              <h1>TVBridge — All Your Shows, One Place</h1>
+              <p>Discover what's on tonight and never miss a moment with TVBridge.</p>
+              <a href="tv-guide.html" class="custom-btn">Explore TV Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-
-<button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
+<button id="scroll-top" class="btn btn-secondary btn-sm custom-btn" aria-label="Scroll to top">↑ Top</button>
 
 <footer>
   <small>Programme images may not be accurate. Channel logos and programme images are copyright of their

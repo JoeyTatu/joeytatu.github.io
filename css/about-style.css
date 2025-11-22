@@ -1,0 +1,113 @@
+/* References
+
+1. Layout & Flexbox
+   - display: flex, flex-direction, align-items, gap
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+     W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+     CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+2. Width, Margin, Padding, Border, Border-radius
+   - width, margin, padding, border, border-radius
+     MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+     W3Schools: https://www.w3schools.com/css/css_box.asp
+     CSS-Tricks: https://css-tricks.com/almanac/properties/b/border-radius/
+
+3. Overflow / Scrolling
+   - overflow: hidden
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+     W3Schools: https://www.w3schools.com/cssref/pr_pos_overflow.asp
+
+4. Images
+   - object-fit: cover
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+     W3Schools: https://www.w3schools.com/css/css3_object-fit.asp
+   - flex-shrink
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
+
+5. Text & Alignment
+   - text-align, display: flex, justify-content
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+     W3Schools: https://www.w3schools.com/css/css_align.asp
+
+6. Responsive Design & Media Queries
+   - @media, max-width
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+     W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+*/
+
+.about-container {
+  width: 40%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Carousel container: shows fixed number of images */
+.carousel-container {
+  width: 960px;
+  /* 6 images * 150px + gaps */
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #bbb;
+}
+
+/* Row holding all images side by side */
+.carousel-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Images fixed width */
+.carousel-row img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* About text below carousel */
+.about-text {
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.info-container {
+  background: #ffd95c;
+  color: black;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body.dark-mode .info-container {
+  background: grey;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-row img {
+    width: calc((100% - 50px) / 3);
+    /* show 3 images at a time */
+  }
+}

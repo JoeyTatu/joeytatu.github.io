@@ -1,3 +1,60 @@
+<!-- References
+
+1. Document Structure
+   - <!DOCTYPE html>, <html>, <head>, <body>, <meta charset="UTF-8>
+     MDN: https://developer.mozilla.org/en-US/docs/Glossary/Doctype
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+     W3Schools: https://www.w3schools.com/html/html_basic.asp
+
+2. Page Title and Favicon
+   - <title>, <link rel="icon">
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+     W3Schools: https://www.w3schools.com/tags/tag_link.asp
+
+3. Linking CSS
+   - <link rel="stylesheet" href="...">
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+     W3Schools: https://www.w3schools.com/html/html_css.asp
+
+4. Header and Navigation
+   - <header>, <nav>, <a>, <span>, <img>
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+     W3Schools: https://www.w3schools.com/html/html_links.asp
+     W3Schools: https://www.w3schools.com/html/html_images.asp
+
+5. Buttons
+   - <button>, aria-label, event handling via JS
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+     W3Schools: https://www.w3schools.com/tags/tag_button.asp
+
+6. Footer
+   - <footer>, <small>, <a href="mailto:...">
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
+     W3Schools: https://www.w3schools.com/tags/tag_footer.asp
+     MDN mailto: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#mailto_links
+
+7. Accessibility
+   - aria-label, semantic HTML elements (<header>, <nav>, <footer>)
+     MDN: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+     W3Schools: https://www.w3schools.com/tags/att_global_aria-label.asp
+
+8. Script Loading
+   - <script src="..." defer>
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+     W3Schools: https://www.w3schools.com/tags/att_script_defer.asp
+
+9. Comments
+      MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Comment
+      W3Schools: https://www.w3schools.com/html/html_comments.asp
+
+10.  About us text
+      Text within the about-info section was created by ChatGPT.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +62,12 @@
   <meta charset="UTF-8">
   <title>Sky TV Guide - Channels</title>
   <link rel="icon" type="image/x-icon" href="images/fav-icon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/global-style.css">
   <link rel="stylesheet" href="css/header-style.css">
+  <link rel="stylesheet" href="css/about-style.css">
+
+
 </head>
 
 <header class="site-header">
@@ -76,16 +137,193 @@
       </div>
     </div> -->
 
-  </div>
+    </div>
 </header>
 
 <button id="theme-toggle" aria-label="Toggle dark mode">
   🌙<span class="theme-label">DARK<br>MODE</span>
 </button>
 
-<!-- #########################-->
+<section class="about-container">
+  <div class="carousel-container">
+    <div class="carousel-row" id="carousel-row">
+      <!-- Images will be added dynamically -->
+    </div>
+  </div>
 
-<button id="scroll-top" aria-label="Scroll to top"><small>↑ Top</small></button>
+  <!-- About Information Expanded -->
+  <div class="info-container">
+    <div class="about-info">
+      <img id="logo-image" src="images/logo.png">
+      <h2>About TVBridge</h2>
+
+      <p>
+        TVBridge was founded in 2008 in London as a small digital start-up with the ambitious goal of simplifying the
+        UK's
+        television experience. At a time when viewers were juggling multiple service providers such as Sky, Freely, and
+        Freeview, the founders — inspired by the frustration of missed shows and fragmented schedules — envisioned a
+        platform where all television listings could be accessed seamlessly in one place. Their guiding philosophy was
+        simple: make television intuitive, discoverable, and fun.
+      </p>
+
+      <p>
+        Initially, TVBridge offered a simple weekly guide for the top ten UK channels. Despite the modest beginnings,
+        the
+        service quickly attracted attention for its clean interface and reliability. By 2009, the company had expanded
+        to
+        cover nearly 50 channels, introducing detailed programme descriptions, cast lists, and broadcast timings. This
+        early phase laid the groundwork for what would become one of the most comprehensive digital television guides in
+        the country.
+      </p>
+
+      <p>
+        In 2010, TVBridge launched its first proprietary “Smart Guide” feature, a revolutionary personalised
+        recommendation engine. The algorithm analysed viewing habits, time slots, and user preferences, allowing the
+        guide
+        to suggest programmes that viewers were statistically more likely to enjoy. This early innovation predated many
+        mainstream streaming recommendation engines and drew comparisons to services offered by Sky+'s early DVR
+        suggestions and Freeview's channel guides.
+      </p>
+
+      <p>
+        2011 was a year of partnerships. TVBridge joined forces with several independent UK broadcasters, bringing
+        specialised channels such as Film4, BBC Four, and niche documentary networks into the fold. This broadened the
+        platform's appeal beyond prime-time viewers to include enthusiasts of classic cinema, factual programming, and
+        independent series. The same year, the development team began experimenting with mobile interfaces, recognising
+        the growing importance of smartphones in daily media consumption.
+      </p>
+
+      <p>
+        By 2012, TVBridge had incorporated real-time alerts, allowing users to be notified moments before their
+        favourite
+        programmes began airing. This functionality mirrored the success of EE's “On Now” alerts while offering richer
+        personalisation. Users could now create watchlists, set reminders, and receive tailored suggestions, a feature
+        that became increasingly vital as the UK's channel landscape became more fragmented with new digital offerings.
+      </p>
+
+      <p>
+        2013 saw the platform introduce “Historical Viewings,” enabling users to access information on past episodes,
+        specials, and classic series. This feature was inspired by Sky's on-demand library and Freeview's catch-up
+        services. Users could track what they had missed, plan marathons, or rediscover timeless shows from decades
+        past.
+        The company also began integrating high-definition metadata, preparing the platform for the impending boom of HD
+        and 4K broadcasting.
+      </p>
+
+      <p>
+        In 2014, TVBridge rolled out its first mobile-friendly platform, fully optimised for iOS and Android devices.
+        The
+        interface was redesigned to accommodate touch navigation, swipe gestures, and mobile alerts. This launch
+        coincided
+        with the increased adoption of smart TVs across UK households, and TVBridge quickly became a companion app for
+        many viewers, allowing them to check schedules while commuting or during short breaks.
+      </p>
+
+      <p>
+        2015 marked TVBridge's foray into interactive scheduling. Users could now rate shows, write brief reviews, and
+        receive dynamic recommendations based on community engagement. This social component was inspired by Freely's
+        community boards and Sky's fan forums, blending personal viewing preferences with communal insights. Around this
+        time, the platform began curating thematic channels, such as “Classic British Comedy,” “Late-Night
+        Documentaries,”
+        and “Family Movie Nights,” which helped niche audiences find content more efficiently.
+      </p>
+
+      <p>
+        By 2016, TVBridge had grown to support over 150 channels, ranging from terrestrial broadcasters to premium
+        subscription networks. Advanced metadata included cast bios, episode synopses, and runtime indicators. In
+        addition, the platform integrated content warnings and parental guidance notes, ensuring families could make
+        informed viewing choices. The same year, the company introduced a “TVBridge Awards Tracker,” allowing users to
+        follow nominees and winners of BAFTA, National Television Awards, and other British accolades.
+      </p>
+
+      <p>
+        The year 2017 was pivotal for user engagement. TVBridge introduced collaborative watchlists, enabling households
+        to share recommended shows and plan joint viewing sessions. The feature allowed multiple profiles per account,
+        adapting to households with diverse tastes. The development team also began experimenting with machine learning
+        to
+        refine recommendations, analysing not only viewing history but also genre preferences, time of day, and device
+        usage patterns.
+      </p>
+
+      <p>
+        In 2018, the company launched “Channel Insights,” providing viewers with detailed analytics on their favourite
+        programmes, including audience ratings, average viewing times, and trending shows. The system also offered
+        suggestions for new content based on micro-trends observed within similar demographic groups. This level of
+        personalisation, combined with the platform's growing catalogue of over 200 channels, positioned TVBridge as the
+        leading digital guide in the UK.
+      </p>
+
+      <p>
+        2019 introduced live event tracking. Recognising the growing popularity of live sports, award shows, and
+        cultural
+        broadcasts, TVBridge implemented a real-time countdown and automatic notifications for live events. The platform
+        could now display concurrent broadcasts and recommend alternatives if a user's preferred programme clashed with
+        a
+        major live event. This functionality proved indispensable for households with multiple viewers and interests.
+      </p>
+
+      <p>
+        During 2020, the UK faced unprecedented social change. TVBridge responded by enhancing remote access,
+        mobile-first
+        functionality, and flexible streaming guidance. The AI scheduler could now combine broadcast and streaming
+        services, giving users a single, coherent timeline of all available content. The platform also introduced
+        curated
+        “Stay-at-Home” lists, highlighting family-friendly programming, live news, and fitness shows during national
+        lockdowns.
+      </p>
+
+      <p>
+        In 2021, TVBridge expanded its international coverage, adding popular non-UK channels to appeal to the diverse
+        British population. Users could now explore series from France, Germany, and the US, all integrated with
+        personalised recommendations. In addition, the platform launched “Episode Highlights,” allowing users to see
+        trailers, behind-the-scenes clips, and interviews before deciding what to watch.
+      </p>
+
+      <p>
+        2022 saw the introduction of the interactive programme guide, featuring clickable previews, cast biographies,
+        ratings, and viewer polls. Users could engage directly with content and even suggest future shows or features.
+        This interactivity brought TVBridge closer to the experience of modern streaming platforms, while retaining its
+        unique British TV-centric identity.
+      </p>
+
+      <p>
+        By 2023, TVBridge had integrated AI-powered content discovery, allowing users to receive daily schedules
+        customised to their interests, viewing history, and preferred genres. The AI could predict upcoming favourites,
+        suggest thematic marathons, and even coordinate viewing plans for groups of friends or family members.
+        Milestones
+        reached this year included over 1 million active UK users and partnerships with more than 50 independent
+        broadcasters.
+      </p>
+
+      <p>
+        Today, TVBridge continues to innovate with plans for virtual reality experiences, live-stream integration, and
+        community-driven watch parties. The platform's mission remains the same: to provide a comprehensive,
+        intelligent,
+        and enjoyable viewing experience for every household in the UK. TVBridge's ongoing commitment to transparency,
+        accessibility, and user-centric design ensures that its story is still being written, one broadcast at a time.
+      </p>
+
+      <p>
+        Across its fifteen-year journey, TVBridge has accumulated numerous accolades, including awards for digital
+        innovation, accessibility design, and community engagement. The platform's legacy lies not only in its
+        technology
+        but also in the countless hours of entertainment it has facilitated, from classic British sitcoms to the latest
+        international dramas. Its history mirrors the evolution of UK television itself: increasingly digital,
+        personalised, and connected, all while honouring the rich traditions of British broadcasting.
+      </p>
+
+      <p>
+        Looking ahead, TVBridge intends to continue bridging the gap between traditional broadcast schedules and modern
+        streaming trends, ensuring viewers always have the most relevant, timely, and engaging content at their
+        fingertips. With every innovation, from personalised schedules to interactive guides, TVBridge reaffirms its
+        commitment to making television effortless, accessible, and delightful for all.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<button id="scroll-top" class="btn btn-secondary btn-sm custom-btn" aria-label="Scroll to top">↑ Top</button>
 
 <footer>
   <small>Programme images may not be accurate. Channel logos and programme images are copyright of their
@@ -97,6 +335,7 @@
 </footer>
 <script src="js/theme.js" defer></script>
 <script src="js/header-script.js" defer></script>
+<script src="js/about-script.js" defer></script>
 </body>
 
 </html>

@@ -27,6 +27,14 @@
       - CSS-Tricks: https://css-tricks.com/almanac/properties/d/display/
 */
 
+.heading3 {
+  font-weight: bold;
+}
+
+.channel-column {
+  background-color: #ffd95c;
+}
+
 /* Hide Now & Next under 500px */
 @media (max-width: 500px) {
   .mini-epg {

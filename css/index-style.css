@@ -1,159 +1,185 @@
+/* References:
+
+   1. Layout & Flexbox:
+      - W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+      - CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+   2. Box Model, Padding, Margin, Borders, Shadow:
+      - W3Schools: https://www.w3schools.com/css/css_box.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/b/box-shadow/
+
+   3. Text & Typography:
+      - W3Schools: https://www.w3schools.com/css/css_text.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/t/text-align/
+
+   4. Images & Object Fit:
+      - W3Schools: https://www.w3schools.com/css/css3_object-fit.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+      - CSS-Tricks: https://css-tricks.com/almanac/properties/o/object-fit/
+
+   5. Responsive Design & Media Queries:
+      - W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+      - MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      - CSS-Tricks: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/
+
 /* Main container */
 .main-slider-container {
-    display: flex;
-    width: 100%;
+    width: 60%;
     margin: 40px auto;
-    gap: 20px;
-    align-items: stretch;
-    /* ensures children stretch to equal height */
-}
-
-/* Left large slider */
-.left-slider {
-    flex: 0 0 70%;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    align-items: center;
 }
 
-/* Slides container */
-.left-slider .slides {
-    position: relative;
-}
-
-/* Individual slide */
-.left-slider .slide {
-    display: none;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-    /* eased transition */
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Top row: welcome blurb + featured show */
+.top-row {
+    display: flex;
     width: 100%;
+    gap: 45px;
+    align-items: stretch;
+    max-width: 1000px;
 }
 
-.left-slider .slide.active {
+/* Welcome blurb (left) */
+.welcome-blurb {
+    flex: 0 0 65%;
+    background: #ffd95c;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertically center text */
+    text-align: center;
+}
+
+/* Right featured show */
+.right-stack {
+    flex: 0 0 30%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.side-section {
+    text-align: center;
+    background: #ffd95c;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-section img {
+    width: auto;
+    height: auto;
+    max-width: 210px;
+    max-height: 295px;
+    object-fit: contain;
+}
+
+/* Bottom row: main slider centered and full width of top row */
+.bottom-row {
+    width: 100%;
+    max-width: 1000px;
+    /* match top row width */
+    display: flex;
+    justify-content: center;
+}
+
+/* Slider container */
+.left-slider {
+    flex: 0 0 100%;
+    /* take full width of bottom row */
+    max-width: 100%;
+    /* prevent overflow */
+}
+
+/* Ensure images inside slider scale correctly */
+.left-slider img {
+    width: 100%;
+    height: auto;
     display: block;
-    opacity: 1;
-    position: relative;
 }
 
-/* Card containing image and text */
+/* Slide card full width */
 .slide-card {
     width: 100%;
-    background: #fff;
+    background: #ffd95c;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    animation: fadeInUp 1s ease forwards;
 }
 
-/* Image on top, scaled to fit fully */
-.slide-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* Text content */
-.slide-content {
-    padding: 20px 30px;
-    animation: fadeInUp 1s ease forwards 0.2s;
-}
-
-.slide-content h1 {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    color: #222;
-}
-
-.slide-content p {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-    color: #555;
-}
-
-/* Right stacked sections */
-.right-stack {
-    flex: 0 0 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* top and bottom sections fixed */
-    height: 900px;
-    /* match left slider height */
-    gap: 20px;
-}
-
-.side-section {
-    flex: 1;
-    /* each takes 50% */
-    min-height: 0;
-    /* important for flexbox */
-    text-align: center;
-    background: #f8f8f8;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: all 1.5s ease-in-out;
-    /* smooth changes */
-}
-
-.side-section p {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-/* Images inside right sections */
-.side-section img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    /* ensures full image visible */
-    border-radius: 8px;
-    transition: all 1.5s ease-in-out;
-}
-
-/* Fade in animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    .main-slider-container {
+/* Responsive */
+@media (max-width: 768px) {
+    .top-row {
         flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
-    .left-slider,
-    .right-stack {
+    .welcome-blurb,
+    .right-stack,
+    .left-slider {
         flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
+}
 
-    .right-stack {
-        flex-direction: row;
-        gap: 10px;
-        height: auto;
-    }
+/* Dark mode */
+/* Dark mode for main sections */
+body.dark-mode .welcome-blurb,
+body.dark-mode .right-stack,
+body.dark-mode .side-section,
+body.dark-mode .bottom-row,
+body.dark-mode .left-slider {
+    background-color: #333;
+    /* dark grey */
+    color: #fff;
+    /* white text */
+}
 
-    .side-section {
-        flex: 1;
-    }
+/* Slider cards */
+body.dark-mode .slide-card {
+    background-color: #444;
+    /* slightly lighter grey */
+    color: #fff;
+}
+
+/* Headings */
+body.dark-mode .welcome-blurb h1,
+body.dark-mode .welcome-blurb h2,
+body.dark-mode .right-stack h1,
+body.dark-mode .right-stack h2,
+body.dark-mode .side-section h1,
+body.dark-mode .side-section h2,
+body.dark-mode .bottom-row h1,
+body.dark-mode .bottom-row h2,
+body.dark-mode .left-slider h1,
+body.dark-mode .left-slider h2,
+body.dark-mode .slide-card h1,
+body.dark-mode .slide-card h2 {
+    color: #fff;
+}
+
+/* Links/buttons inside dark mode sections */
+body.dark-mode .welcome-blurb a,
+body.dark-mode .right-stack a,
+body.dark-mode .side-section a,
+body.dark-mode .bottom-row a,
+body.dark-mode .left-slider a,
+body.dark-mode .slide-card a {
+    color: #1e90ff;
+    /* bright blue for visibility */
 }
