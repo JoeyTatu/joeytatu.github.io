@@ -282,32 +282,26 @@ footer a:hover {
   top: 12px;
   right: 12px;
   min-width: 44px;
-  /* minimum width */
   height: auto;
-  /* allow height to grow */
   padding: 6px 10px;
-  /* space around icon + text */
   border-radius: 50%;
-  /* circular-ish */
   border: none;
   font-size: 14px;
-  /* icon size */
   line-height: 1.1;
   cursor: pointer;
   background: #f4f4f4;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  z-index: 2000;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
-  /* icon above label */
   justify-content: center;
   align-items: center;
   text-align: center;
   transition: background 0.3s, color 0.3s, transform 0.2s;
   white-space: pre;
   font-weight: bold;
-  /* respect line breaks in label */
 }
+
 
 #theme-toggle:hover {
   background-color: lightgray;
@@ -394,24 +388,12 @@ body.dark-mode .past {
   opacity: 0.6;
 }
 
-body.dark-mode .on-now {
-  border-left: 4px solid orange;
-  border-right: 4px solid orange;
-  background-color: #333;
-}
-
-body.dark-mode .on-next {
-  border-left: 4px solid yellow;
-  border-right: 4px solid yellow;
-  background-color: #444;
-}
-
 /* ============================================
    INDEX PAGE STYLES
    ============================================ */
 
 /* Hide Now & Next under 500px */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .mini-epg {
     display: none !important;
   }
@@ -535,7 +517,6 @@ body.dark-mode #channel-logo {
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
-
 /* ============================================
    LISTINGS PAGE STYLES
    ============================================ */
@@ -608,18 +589,6 @@ li {
   opacity: 0.8;
 }
 
-.on-now {
-  border-left: 4px solid orange;
-  border-right: 4px solid orange;
-  background-color: #ffd699;
-}
-
-.on-next {
-  border-left: 4px solid yellow;
-  border-right: 4px solid yellow;
-  background-color: #ffffb3;
-}
-
 /* Main button styling */
 .custom-btn {
   background-color: grey;
@@ -640,8 +609,9 @@ li {
 
 .custom-btn:hover {
   background-color: #000;
-  box-shadow: 0 0 30px 15px rgba(255,217,92,0.5);
-  transform: translateY(-2px); /* optional lift */
+  box-shadow: 0 0 30px 15px rgba(255, 217, 92, 0.5);
+  transform: translateY(-2px);
+  /* optional lift */
 }
 
 body.dark-mode .custom-btn {

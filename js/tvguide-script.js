@@ -276,8 +276,8 @@ async function loadMiniEPG(sid, region) {
 // ==========================
 async function loadBothRegions() {
     const [ukChannels, ieChannels] = await Promise.all([
-        renderChannels("channels-uk.json", "channels-uk-list", "uk"),
-        renderChannels("channels-ireland.json", "channels-ireland-list", "ie")
+        renderChannels("json/channels-uk.json", "channels-uk-list", "uk"),
+        renderChannels("json/channels-ireland.json", "channels-ireland-list", "ie")
     ]);
 
     await Promise.all([

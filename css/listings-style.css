@@ -104,16 +104,31 @@ li {
     opacity: 0.8;
 }
 
+/* 
 .on-now {
-    border-left: 4px solid orange;
+    border: 4px solid #db4550;
     border-right: 4px solid orange;
     background-color: #ffd699;
+} */
+
+.on-now,
+.on-next {
+    border-left: 4px solid #1a81ff;
+    border-right: 4px solid #1a81ff;
+    background-color: #cce3ff;
 }
 
-.on-next {
-    border-left: 4px solid yellow;
-    border-right: 4px solid yellow;
-    background-color: #ffffb3;
+/* body.dark-mode .on-now {
+  border-left: 4px solid orange;
+  border-right: 4px solid orange;
+  background-color: #333;
+} */
+
+body.dark-mode .on-now,
+body.dark-mode .on-next {
+    border-left: 4px solid #1a81ff;
+    border-right: 4px solid #1a81ff;
+    background-color: #003980;
 }
 
 /* Channel Listings button aligned left */

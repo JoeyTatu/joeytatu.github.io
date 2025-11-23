@@ -115,8 +115,8 @@ function dedupeEvents(events) {
 async function loadChannelHeader() {
     try {
         const [resIre, resUK] = await Promise.all([
-            fetch('channels-ireland.json'),
-            fetch('channels-uk.json')
+            fetch('json/channels-ireland.json'),
+            fetch('json/channels-uk.json')
         ]);
         const [channelsIre, channelsUK] = await Promise.all([resIre.json(), resUK.json()]);
         const all = [...channelsIre, ...channelsUK];

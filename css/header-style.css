@@ -86,7 +86,7 @@ body {
 
 /* Header wrapper */
 .site-header {
-  width: 97%;
+  width: 100%;
   border-bottom: 1px solid var(--border);
   background: var(--nav-bg);
   box-shadow: var(--shadow);
@@ -94,6 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin: 0 auto;
 }
 
 /* Top row: logo + nav + search */
@@ -102,9 +103,6 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* allow wrapping if needed */
-  max-width: 97%;
-  /* prevent children from spilling out */
 }
 
 /* Logo */
@@ -123,11 +121,9 @@ body {
 /* Wrapper for nav + search */
 .nav-search-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* search below nav */
   align-items: center;
-  gap: 34px;
-  max-width: 95%;
-  /* prevent overflow */
+  gap: 12px;
 }
 
 /* Navigation */

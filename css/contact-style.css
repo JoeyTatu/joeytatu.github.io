@@ -1,0 +1,248 @@
+/* References:
+
+1. CSS File Linking
+   - <link rel="stylesheet" href="css/contact-style.css">
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+     W3Schools: https://www.w3schools.com/html/html_css.asp
+
+2. Containers and Layout
+   - .contact-section, .contact-top, .contact-map, .contact-details
+     Flexbox layout, gap, width, margin, padding
+     MDN Flexbox: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+     W3Schools Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
+
+3. Iframes
+   - .contact-map iframe
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+     W3Schools: https://www.w3schools.com/tags/tag_iframe.asp
+
+4. Backgrounds, Borders, and Colors
+   - background, border-radius, color, border
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/background
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     W3Schools: https://www.w3schools.com/css/css_background.asp
+
+5. Forms
+   - .contact-form-container, form, input, textarea, button
+     MDN: https://developer.mozilla.org/en-US/docs/Learn/Forms
+     W3Schools: https://www.w3schools.com/css/css_form.asp
+
+6. Flexbox for Form Fields
+   - .form-field { display: flex; align-items: center; gap: 10px; }
+     MDN: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+     W3Schools: https://www.w3schools.com/css/css3_flexbox.asp
+
+7. Labels
+   - label styling, width, font-weight, gap for emoji + text
+     MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+     W3Schools: https://www.w3schools.com/tags/tag_label.asp
+
+8. Placeholder Styling
+   - ::placeholder pseudo-element
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     W3Schools: https://www.w3schools.com/cssref/sel_placeholder.asp
+
+9. Dark Mode Styling
+   - body.dark-mode selectors, changing background, text, borders
+     MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#dark_mode
+     W3Schools: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+
+10. Responsive Design
+    - @media queries, max-width, stacking elements
+      MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+      W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+11. Text Styling
+    - font-size, line-height, text-align
+      MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+      MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+      W3Schools: https://www.w3schools.com/css/css_text.asp
+
+12. Script Origin
+    - This CSS file handles styling for the contact.html page including the form, map, details, intro text, and responsive layout.
+*/
+
+
+/*
+   CONTACT PAGE STYLES
+*/
+
+/* Main contact section container */
+.contact-section {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Map + Details container */
+.contact-top {
+    display: flex;
+    gap: 20px;
+    height: 400px;
+}
+
+.contact-map,
+.contact-details {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+.contact-details {
+    background: #ffd95c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ===========================
+   CONTACT FORM
+   =========================== */
+.contact-form-container {
+    background: #ffd95c;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form itself */
+.contact-form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Each field row with label + input */
+.form-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Labels on the left with emoji */
+.form-field label {
+    width: 80px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* spacing between emoji and text */
+}
+
+/* Inputs take remaining space */
+.form-field input,
+.form-field textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 14px;
+}
+
+/* Submit button styling */
+.contact-form-container button {
+    width: 150px;
+    align-self: center;
+}
+
+/* Placeholder style: italic and faded */
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode placeholder */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark mode for form container */
+body.dark-mode .contact-form-container,
+body.dark-mode .contact-details {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .form-field input,
+body.dark-mode .form-field textarea {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* Contact intro section above map/details */
+.contact-intro {
+    width: 100%;
+    background: #ffd95c;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    justify-content: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.contact-intro h1 {
+    text-align: center;
+}
+
+/* Dark mode for intro */
+body.dark-mode .contact-intro {
+    background: #333;
+    color: #fff;
+}
+
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+
+    /* Stack map + details */
+    .contact-top {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact-map,
+    .contact-details {
+        height: 300px;
+    }
+
+    /* Stack label + input vertically */
+    .form-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-field label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+}

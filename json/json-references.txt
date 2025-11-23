@@ -1,0 +1,35 @@
+JSON References:
+
+1. custom-images.json
+   - Stores direct URL references for custom images keyed by show names.
+     Structure: JSON object with string keys (show names) and string values (image URLs).
+     Example: "Big Brother": "https://static.tvmaze.com/uploads/images/medium_portrait/589/1474564.jpg"
+     MDN JSON Guide: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+     W3Schools JSON Syntax: https://www.w3schools.com/js/js_json_syntax.asp
+     JSON Data Types: https://www.w3schools.com/js/js_json_datatypes.asp
+
+2. pattern-mapping.json
+   - Maps regex patterns to image URLs for dynamic image assignment based on show names.
+     Structure: JSON array of objects with keys: pattern (string), flags (string), url (string).
+     Example:
+     {
+         "pattern": "^STV News",
+         "flags": "i",
+         "url": "https://static.tvmaze.com/uploads/images/medium_portrait/111/279632.jpg"
+     }
+     Notes: 
+       * pattern uses regex syntax to match show names.
+       * flags modify regex behavior (e.g., "i" for case-insensitive).
+       * url points to an image (local or external).
+     MDN Regular Expressions: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+     W3Schools Regex Guide: https://www.w3schools.com/js/js_regexp.asp
+     JSON Arrays and Objects: https://www.w3schools.com/js/js_json_arrays.asp
+
+3. Usage Notes
+   - custom-images.json: for static mappings of known shows to images.
+   - pattern-mapping.json: for dynamic or partial name matches.
+   - Both can be loaded in JavaScript using fetch() or imported as modules.
+     Example:
+     fetch('custom-images.json')
+       .then(response => response.json())
+       .then(data => console.log(data["Big Brother"]));
