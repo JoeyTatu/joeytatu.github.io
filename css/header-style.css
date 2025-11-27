@@ -97,12 +97,30 @@ body {
   margin: 0 auto;
 }
 
-/* Top row: logo + nav + search */
+/* Header layout:
+   Left = Logo
+   Middle = Search
+   Right = Nav
+*/
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+/* NEW — Centre column for search box */
+.header-middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* If the page has no search bar, the middle column still keeps spacing */
+.header-middle:empty {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* Logo */
@@ -118,30 +136,20 @@ body {
   display: block;
 }
 
-/* Wrapper for nav + search */
-.nav-search-wrapper {
-  display: flex;
-  flex-direction: column; /* search below nav */
-  align-items: center;
-  gap: 12px;
-}
-
 /* Navigation */
 .main-nav {
   display: flex;
   gap: 34px;
   align-items: center;
   justify-content: center;
-  flex: 1 1 auto;
-  /* grow and shrink */
+  flex: 0 0 auto;
+  /* don't stretch the nav */
   min-width: 0;
-  /* important to allow shrinking */
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
-  /* icon above text */
   align-items: center;
   gap: 6px;
   text-decoration: none;
@@ -177,18 +185,16 @@ body {
   color: var(--accent);
 }
 
-.nav-icon svg {
-  width: 100%;
-  height: 100%;
-  display: block;
+.nav-label {
+  color: black;
 }
 
 /* Search container */
 #search-container {
-  flex: 0 1 150px;
-  min-width: 250px;
-  max-width: 80%;
-  /* cap at parent width */
+  width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #search-input {
@@ -214,37 +220,89 @@ body {
   display: inline-block;
 }
 
-/* Desktop: nav + search in row */
+/* Default nav colours */
+.nav-item {
+  position: relative; /* required for pseudo-element border */
+  z-index: 0;
+}
+
+.nav-item .nav-icon,
+.nav-item .nav-label {
+  color: #000;
+  transition: color 0.2s ease; /* smooth hover */
+}
+
+/* Hover effect */
+.nav-item:hover .nav-icon,
+.nav-item:hover .nav-label {
+  color: grey;
+}
+
+/* Light blue border effect */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid #00bfff; /* light blue border */
+  border-radius: 4px; /* match your button corners if needed */
+  box-shadow: 0 0 0 0 #00bfff; /* initial glow */
+  transition: box-shadow 0.3s, transform 0.2s;
+  z-index: -1; /* behind the button content */
+}
+
+.nav-item:hover::before {
+  box-shadow: 0 0 10px 4px rgba(0, 191, 255, 0.4); /* subtle glow */
+  transform: translateY(-2px); /* slight lift effect */
+}
+
+/* Dark mode nav colours */
+body.dark-mode .nav-item .nav-icon,
+body.dark-mode .nav-item .nav-label {
+  color: #fff;
+}
+
+body.dark-mode .nav-item:hover .nav-icon,
+body.dark-mode .nav-item:hover .nav-label {
+  color: grey;
+}
+
+/* Dark mode border effect */
+body.dark-mode .nav-item::before {
+  border-color: #00bfff;
+  box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.2);
+}
+
+body.dark-mode .nav-item:hover::before {
+  box-shadow: 0 0 10px 4px rgba(0, 191, 255, 0.4);
+}
+
+/* Desktop-specific layout */
 @media (min-width: 901px) {
-  .nav-search-wrapper {
+  .header-top {
     flex-direction: row;
-    align-items: center;
-    gap: 34px;
-    /* space between nav and search on desktop */
   }
 }
 
-/* Mobile responsive layout */
+/* Mobile layout */
 @media (max-width: 900px) {
   .header-top {
     flex-direction: column;
-    /* stack logo + nav-search wrapper */
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
-    /* space between logo and nav-search */
   }
 
   .main-nav {
     flex: 0 1 auto;
-    /* stop stretching */
     gap: 16px;
     justify-content: center;
   }
 
   #search-container {
     width: auto;
-    /* keep small search box */
     min-width: 200px;
     max-width: 250px;
   }

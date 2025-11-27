@@ -91,64 +91,58 @@
         <img src="images/logo.png" alt="TVBridge Logo" class="header-logo">
       </a>
 
-      <!-- Nav + Search wrapper -->
-      <div class="nav-search-wrapper">
-        <nav class="main-nav">
-          <a class="nav-item" href="index.html">
-            <span class="nav-icon">
-              <!-- Home Icon -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 10L12 4L21 10V20H3V10Z"></path>
-              </svg>
-            </span>
-            <span class="nav-label">Home</span>
-          </a>
-
-          <a class="nav-item" href="about.html">
-            <span class="nav-icon">
-              <!-- About Icon -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 8V12"></path>
-                <circle cx="12" cy="16" r="1" fill="currentColor"></circle>
-              </svg>
-            </span>
-            <span class="nav-label">About</span>
-          </a>
-
-          <a class="nav-item" href="contact.html">
-            <span class="nav-icon">
-              <!-- Contact Icon -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4H20V16H5L4 17V4Z"></path>
-                <path d="M4 4L12 11L20 4"></path>
-              </svg>
-            </span>
-            <span class="nav-label">Contact</span>
-          </a>
-
-          <a class="nav-item active" href="tv-guide.html">
-            <span class="nav-icon">
-              <!-- TV Guide Icon -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="5" width="18" height="13" rx="2"></rect>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </span>
-            <span class="nav-label">TV Guide</span>
-          </a>
-        </nav>
-
-        <!-- Search -->
-        <div id="search-container">
-          <input type="text" id="search-input" placeholder="🔎 Search channels...">
-          <button id="clear-search">✖</button>
-        </div>
+      <!-- Search (now positioned in the middle) -->
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="🔎 Search channels...">
+        <button id="clear-search">✖</button>
       </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <a class="nav-item" href="index.html">
+          <span class="nav-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10L12 4L21 10V20H3V10Z"></path>
+            </svg>
+          </span>
+          <span class="nav-label">Home</span>
+        </a>
+
+        <a class="nav-item" href="about.html">
+          <span class="nav-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8V12"></path>
+              <circle cx="12" cy="16" r="1" fill="currentColor"></circle>
+            </svg>
+          </span>
+          <span class="nav-label">About</span>
+        </a>
+
+        <a class="nav-item" href="contact.html">
+          <span class="nav-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4H20V16H5L4 17V4Z"></path>
+              <path d="M4 4L12 11L20 4"></path>
+            </svg>
+          </span>
+          <span class="nav-label">Contact</span>
+        </a>
+
+        <a class="nav-item active" href="tv-guide.html">
+          <span class="nav-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="13" rx="2"></rect>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </span>
+          <span class="nav-label">TV Guide</span>
+        </a>
+      </nav>
 
     </div>
   </header>
@@ -176,7 +170,7 @@
   </button>
 
   <footer>
-  <small>&copy; <span id="footer-year"></span> TVBridge.com — All Rights Reserved</small>
+    <small>&copy; <span id="footer-year"></span> TVBridge.com — All Rights Reserved</small>
   </footer>
   <script src="js/tvguide-script.js" defer></script>
   <script src="js/theme.js" defer></script>
