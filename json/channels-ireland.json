@@ -581,17 +581,17 @@
     "logo": "images/Sky_Cinema_Christmas_HD.svg",
     "name": "Sky Cinema Christmas HD"
   },
-    {
+  {
     "sid": 4033,
     "number": 303,
-    "logo": "images/Sky_Cinema_Epic_Worlds_HD.png",
-    "name": "Sky Cinema Epic Worlds HD"
+    "logo": "images/Sky_Cinema_Exclusives_HD.png",
+    "name": "Sky Cinema Exclusives HD"
   },
   {
     "sid": 4015,
     "number": 304,
-    "logo": "images/Sky_Cinema_Greats_HD.png",
-    "name": "Sky Cinema Greats HD"
+    "logo": "images/Sky_Cinema_Favourites_HD.png",
+    "name": "Sky Cinema Favourites HD"
   },
   {
     "sid": 1199,
@@ -1265,7 +1265,7 @@
     "logo": "images/Cartoon_Network.svg",
     "name": "Cartoon Network"
   },
-    {
+  {
     "sid": 5609,
     "number": 641,
     "logo": "images/Boomerang.svg",
@@ -1336,12 +1336,6 @@
     "number": 671,
     "logo": "images/QVC_Extra.svg",
     "name": "QVC Extra"
-  },
-  {
-    "sid": 3404,
-    "number": 672,
-    "logo": "images/High_Street_TV.svg",
-    "name": "High Street TV 3"
   },
   {
     "sid": 3632,
@@ -2019,7 +2013,7 @@
     "sid": 1264,
     "number": 3133,
     "logo": "images/RTÉ_Lyric_FM.svg",
-    "name": "RTÉ Lyric fm"
+    "name": "RTÉ Lyric FM"
   },
   {
     "sid": 1263,

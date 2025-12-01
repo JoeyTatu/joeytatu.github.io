@@ -725,17 +725,17 @@
     "logo": "images/Sky_Cinema_Christmas_HD.svg",
     "name": "Sky Cinema Christmas HD"
   },
-    {
+  {
     "sid": 4033,
     "number": 303,
-    "logo": "images/Sky_Cinema_Epic_Worlds_HD.png",
-    "name": "Sky Cinema Epic Worlds HD"
+    "logo": "images/Sky_Cinema_Exclusives_HD.png",
+    "name": "Sky Cinema Exclusives HD"
   },
   {
     "sid": 4015,
     "number": 304,
-    "logo": "images/Sky_Cinema_Greats_HD.png",
-    "name": "Sky Cinema Greats HD"
+    "logo": "images/Sky_Cinema_Favourites_HD.png",
+    "name": "Sky Cinema Favourites HD"
   },
   {
     "sid": 1199,
@@ -1526,8 +1526,8 @@
   {
     "sid": 3404,
     "number": 672,
-    "logo": "images/High_Street_TV.svg",
-    "name": "High Street TV 3"
+    "logo": "images/Shop_Unlimited.png",
+    "name": "Shop Unlimited"
   },
   {
     "sid": 3632,
@@ -2447,25 +2447,25 @@
     "logo": "images/ITV1_HD.svg",
     "name": "ITV1 Wales HD"
   },
-    {
+  {
     "sid": 1167,
     "number": 8076,
     "logo": "images/STV_HD.png",
     "name": "STV HD - North (Aberdeen)"
   },
-      {
+  {
     "sid": 1168,
     "number": 8077,
     "logo": "images/STV_HD.png",
     "name": "STV HD - North (Dundee/Tayside)"
   },
-        {
+  {
     "sid": 1170,
     "number": 8078,
     "logo": "images/STV_HD.png",
     "name": "STV HD - Central (East)"
   },
-          {
+  {
     "sid": 4055,
     "number": 8079,
     "logo": "images/STV_HD.png",
@@ -2691,7 +2691,7 @@
     "sid": 1264,
     "number": 3133,
     "logo": "images/RTÉ_Lyric_FM.svg",
-    "name": "RTÉ Lyric fm"
+    "name": "RTÉ Lyric FM"
   },
   {
     "sid": 1263,
